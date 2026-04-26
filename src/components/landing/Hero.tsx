@@ -1,9 +1,28 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Play, Pause, Sparkles } from "lucide-react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/hero.jpg";
 
+const VIDEO_URL = "https://espa%C3%A7oloungezen.com/wp-content/uploads/2026/04/Video-da-fonte.mp4";
+const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.webp";
+
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) {
+      v.play();
+      setIsPlaying(true);
+    } else {
+      v.pause();
+      setIsPlaying(false);
+    }
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       {/* Background image */}
@@ -69,17 +88,35 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.7 }}
           className="hidden lg:block relative"
         >
-          <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-[4/5] max-w-md ml-auto">
+          <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
             <video
-              src="https://cdn.coverr.co/videos/coverr-a-woman-doing-yoga-on-the-beach-2633/1080p.mp4"
-              poster={hero}
-              autoPlay
-              muted
+              ref={videoRef}
+              src={VIDEO_URL}
+              poster={COVER_URL}
               loop
               playsInline
+              preload="metadata"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent" />
+            <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
+
+            {/* Play / Pause button */}
+            <button
+              type="button"
+              onClick={togglePlay}
+              aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}
+            >
+              <span className="flex h-20 w-20 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse hover:scale-110 transition-transform duration-300">
+                {isPlaying ? (
+                  <Pause className="h-8 w-8" fill="currentColor" />
+                ) : (
+                  <Play className="h-8 w-8 ml-1" fill="currentColor" />
+                )}
+              </span>
+            </button>
           </div>
 
           {/* Floating trust badge — overlaps bottom-right of the video */}
