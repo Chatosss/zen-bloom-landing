@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="gradient-gold text-gold-foreground rounded-full px-8 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.04] transition-transform duration-300"
+              className="gradient-gold text-gold-foreground rounded-full px-8 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.03] transition-transform duration-300"
             >
               Quero Agendar Minha Sessão
               <ArrowRight className="h-5 w-5" />
@@ -62,14 +62,28 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Floating trust badge */}
+        {/* Video with overlapping trust badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="hidden lg:flex justify-end"
+          className="hidden lg:block relative"
         >
-          <div className="animate-float relative">
+          <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-[4/5] max-w-md ml-auto">
+            <video
+              src="https://cdn.coverr.co/videos/coverr-a-woman-doing-yoga-on-the-beach-2633/1080p.mp4"
+              poster={hero}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent" />
+          </div>
+
+          {/* Floating trust badge — overlaps bottom-right of the video */}
+          <div className="absolute -bottom-6 -right-4 animate-float">
             <div className="rounded-2xl glass border border-border/60 shadow-elegant p-6 max-w-xs">
               <div className="flex items-center gap-3">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full gradient-gold text-gold-foreground">
