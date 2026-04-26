@@ -96,8 +96,8 @@ export default {
           },
         },
         "soft-pulse": {
-          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0.55)" },
-          "50%": { boxShadow: "0 0 0 14px hsl(var(--gold) / 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--gold) / 0.25)" },
+          "50%": { boxShadow: "0 0 0 8px hsl(var(--gold) / 0)" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
@@ -111,7 +111,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "soft-pulse": "soft-pulse 2.4s ease-in-out infinite",
+        "soft-pulse": "soft-pulse 3.6s ease-in-out infinite",
         "float": "float 5s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.7s ease-out both",
       },
