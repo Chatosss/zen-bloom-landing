@@ -162,7 +162,7 @@ const ServiceDetail = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+        <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden">
           <img 
             src={service.heroImg} 
             alt={service.title}
@@ -191,9 +191,9 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        <section className="py-24">
-          <div className="max-w-[1100px] mx-auto px-4">
-            <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-20 items-start">
+        <section className="py-20 md:py-32">
+          <div className="max-w-[1200px] mx-auto px-4">
+            <div className="grid lg:grid-cols-[55%_40%] gap-[5%] items-start">
               
               {/* Text Description */}
               <motion.div
@@ -206,13 +206,24 @@ const ServiceDetail = () => {
                   <span className="text-gold font-semibold tracking-[0.2em] uppercase text-xs">Sobre a {service.category === "Tratamentos" ? "Técnica" : "Prática"}</span>
                 </div>
                 
-                <h2 className="mt-8 text-3xl md:text-4xl font-serif text-charcoal leading-tight font-medium">
-                  {service.description}
+                <h2 className="mt-8 text-2xl md:text-[32px] font-serif text-charcoal leading-tight font-semibold max-w-[90%]">
+                  {service.title === "Yoga Gestacional" ? "Uma prática suave para cada fase da gestação" : 
+                   service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente com tradição" :
+                   service.title === "Pilates" ? "Fortalecimento e controle com precisão técnica" :
+                   service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
+                   service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
+                   service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
+                   service.title === "Drenagem Linfática Pré e Pós Operatório" ? "Recuperação acelerada e toque especializado" :
+                   "Abordagem terapêutica para estética e saúde"}
                 </h2>
                 
-                <div className="my-10 w-20 h-px bg-gold/30" />
+                <p className="mt-6 text-charcoal/80 font-serif text-lg md:text-xl leading-[1.7] font-normal">
+                  {service.description}
+                </p>
+
+                <div className="my-8 w-20 h-px bg-gold/30" />
                 
-                <p className="text-charcoal/70 leading-relaxed text-lg">
+                <p className="text-charcoal/60 leading-relaxed text-base md:text-lg">
                   {service.extendedDesc}
                 </p>
                 
@@ -230,17 +241,17 @@ const ServiceDetail = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-charcoal p-8 md:p-10 rounded-3xl shadow-2xl border-t-4 border-gold lg:sticky lg:top-32"
+                className="bg-charcoal p-10 rounded-3xl shadow-2xl border-t-4 border-gold lg:sticky lg:top-32"
               >
                 <h3 className="text-2xl font-serif text-white mb-4 relative inline-block">
                   Principais Benefícios
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </h3>
-                <ul className="mt-10 space-y-6">
+                <ul className="mt-10 space-y-4">
                   {service.benefits.map((benefit: string, index: number) => (
                     <li key={index} className="flex items-start gap-4">
-                      <div className="bg-gold/10 p-1 rounded-full">
-                        <CheckCircle2 className="h-5 w-5 text-gold shrink-0" />
+                      <div className="bg-gold/10 p-1 rounded-full mt-1">
+                        <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
                       </div>
                       <span className="text-cream/80 text-lg leading-snug">{benefit}</span>
                     </li>
