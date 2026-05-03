@@ -1,21 +1,31 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, HeartPulse, Award } from "lucide-react";
+import { ShieldCheck, HeartPulse, Award, Users, Brain } from "lucide-react";
 
 const items = [
   {
-    icon: ShieldCheck,
-    title: "Segurança e Exclusividade",
-    text: "Um espaço 100% focado no conforto e na privacidade feminina.",
+    icon: Award,
+    title: "Formação nacional e internacional",
+    text: "Conhecimento técnico sólido com especializações nacionais e vivência direta na Índia.",
   },
   {
     icon: HeartPulse,
-    title: "Metodologia Integrada",
-    text: "Unimos a ciência da fisioterapia à filosofia milenar do corpo e mente.",
+    title: "Especialização em reabilitação",
+    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida.",
   },
   {
-    icon: Award,
-    title: "Autoridade Internacional",
-    text: "Protocolos baseados em especializações nacionais e vivência direta na Índia.",
+    icon: Brain,
+    title: "Abordagem integrada entre corpo e mente",
+    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Atendimento individualizado e seguro",
+    text: "Protocolos personalizados para as necessidades únicas de cada paciente.",
+  },
+  {
+    icon: Users,
+    title: "Exclusivo para mulheres",
+    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino.",
   },
 ];
 
@@ -37,7 +47,7 @@ const Authority = () => {
           </h2>
         </motion.div>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
