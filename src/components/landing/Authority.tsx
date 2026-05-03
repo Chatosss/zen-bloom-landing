@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, HeartPulse, Award } from "lucide-react";
-
 import { ShieldCheck, HeartPulse, Award, Users, Brain } from "lucide-react";
 
 const items = [
