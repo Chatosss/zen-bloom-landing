@@ -1,17 +1,20 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const practices = [
-  { title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
-  { title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
-  { title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
-  { title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-02.jpg" },
-  { title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Terapeutico-02.jpeg" },
+  { slug: "yoga-gestacional", title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
+  { slug: "hatha-yoga", title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
+  { slug: "pilates", title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
+  { slug: "yin-yoga", title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-02.jpg" },
+  { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Terapeutico-02.jpeg" },
 ];
 
 const treatments = [
-  { title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg" },
-  { title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
+  { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg" },
+  { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
   { 
+    slug: "estetica-funcional",
     title: "Estética Funcional", 
     desc: "Estética funcional é a abordagem terapêutica que une recursos estéticos com objetivos clínicos. Isso inclui tratamentos que, além de melhorar a aparência, atuam sobre dores musculares, retenção de líquidos, perda de tônus e desequilíbrios estruturais.", 
     img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg",
@@ -102,10 +105,13 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
           ))}
         </ul>
       )}
-      <button className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn">
+      <Link 
+        to={`/${s.slug}`}
+        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn"
+      >
         Saber mais
         <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
-      </button>
+      </Link>
     </div>
   </motion.article>
 );
