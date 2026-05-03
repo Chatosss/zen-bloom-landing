@@ -1,28 +1,20 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import gestacional from "@/assets/yoga-gestacional.jpg";
-import hatha from "@/assets/hatha-yoga.jpg";
-import pilates from "@/assets/pilates.jpg";
-import yin from "@/assets/yin-yoga.jpg";
-import terapeutico from "@/assets/yoga-terapeutico.jpg";
-import kinesio from "@/assets/kinesio.jpg";
-import drenagem from "@/assets/drenagem.jpg";
-
 const practices = [
-  { title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: gestacional },
-  { title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: hatha },
-  { title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: pilates },
-  { title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: yin },
-  { title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: terapeutico },
+  { title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
+  { title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
+  { title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
+  { title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-02.jpg" },
+  { title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Terapeutico-02.jpeg" },
 ];
 
 const treatments = [
-  { title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: drenagem },
-  { title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: kinesio },
+  { title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg" },
+  { title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
   { 
     title: "Estética Funcional", 
     desc: "Estética funcional é a abordagem terapêutica que une recursos estéticos com objetivos clínicos. Isso inclui tratamentos que, além de melhorar a aparência, atuam sobre dores musculares, retenção de líquidos, perda de tônus e desequilíbrios estruturais.", 
-    img: drenagem,
+    img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg",
     indications: [
       "Redução de flacidez sem cirurgia",
       "Fortalecimento muscular",
