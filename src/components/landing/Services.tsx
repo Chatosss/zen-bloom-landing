@@ -17,7 +17,7 @@ const treatments = [
     slug: "estetica-funcional",
     title: "Estética Funcional", 
     desc: "Estética funcional é a abordagem terapêutica que une recursos estéticos com objetivos clínicos. Isso inclui tratamentos que, além de melhorar a aparência, atuam sobre dores musculares, retenção de líquidos, perda de tônus e desequilíbrios estruturais.", 
-    img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg",
+    img: "https://leonardopages.com/wp-content/uploads/2026/05/Estetica-01.jpg",
     indications: [
       "Redução de flacidez sem cirurgia",
       "Fortalecimento muscular",
