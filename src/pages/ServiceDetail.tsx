@@ -122,7 +122,7 @@ const serviceData: Record<string, any> = {
   "estetica-funcional": {
     category: "Tratamentos",
     title: "Estética Funcional",
-    heroImg: "https://images.unsplash.com/photo-1544161515-436cead10270?q=80&w=2070&auto=format&fit=crop",
+    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Estetica-01.jpg",
     description: "A Estética Funcional une recursos estéticos com objetivos clínicos, tratando o corpo de dentro para fora para resultados mais duradouros e saudáveis.",
     extendedDesc: "Tratamos não apenas a queixa estética, mas as causas subjacentes. Seja flacidez, retenção ou gordura localizada, nossa abordagem considera a saúde metabólica e a funcionalidade do tecido, garantindo beleza com saúde.",
     benefits: [
