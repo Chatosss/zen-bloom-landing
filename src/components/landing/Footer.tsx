@@ -1,7 +1,11 @@
-import { Instagram, Facebook, MessageCircle } from "lucide-react";
+import { Instagram, Facebook, MessageCircle, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <footer className="bg-charcoal text-cream/80">
       <div className="container mx-auto py-14 grid md:grid-cols-3 gap-10">
@@ -14,10 +18,16 @@ const Footer = () => {
         <div>
           <p className="font-serif text-lg text-cream">Navegação</p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#hero" className="hover:text-gold transition-colors">Início</a></li>
-            <li><a href="#servicos" className="hover:text-gold transition-colors">Práticas</a></li>
-            <li><a href="#sobre" className="hover:text-gold transition-colors">Sobre Kíssila</a></li>
-            <li><a href="#contato" className="hover:text-gold transition-colors">Contato</a></li>
+            {isHomePage ? (
+              <>
+                <li><a href="#hero" className="hover:text-gold transition-colors">Início</a></li>
+                <li><a href="#servicos" className="hover:text-gold transition-colors">Práticas</a></li>
+                <li><a href="#sobre" className="hover:text-gold transition-colors">Sobre Kíssila</a></li>
+                <li><a href="#contato" className="hover:text-gold transition-colors">Contato</a></li>
+              </>
+            ) : (
+              <li><Link to="/" className="hover:text-gold transition-colors">Voltar para Início</Link></li>
+            )}
           </ul>
         </div>
         <div>
