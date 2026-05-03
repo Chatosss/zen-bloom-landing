@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { BadgeCheck, GraduationCap, MessageCircle, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import kissila from "@/assets/kissila.jpg";
-
 const credentials = [
   { icon: BadgeCheck, label: "CREFITO 2 — Fisioterapeuta registrada" },
   { icon: GraduationCap, label: "Especialista em Saúde da Mulher" },
@@ -22,7 +20,7 @@ const About = () => {
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
             <img
-              src={kissila}
+              src="https://leonardopages.com/wp-content/uploads/2026/05/Kissila-Santos.jpg"
               alt="Kíssila Santos, fisioterapeuta especialista em saúde da mulher"
               loading="lazy"
               width={1024}
