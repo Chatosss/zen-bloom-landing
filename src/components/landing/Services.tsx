@@ -31,12 +31,8 @@ const Services = () => {
         >
           <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Práticas</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Escolha a prática ideal
-            <span className="block italic text-sage-deep">para o seu momento</span>
+            Práticas de Saúde e Bem Estar
           </h2>
-          <p className="mt-5 text-charcoal/70 max-w-xl mx-auto">
-            Cada modalidade é conduzida com olhar técnico, escuta atenta e o cuidado de quem entende o corpo feminino.
-          </p>
         </motion.div>
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
