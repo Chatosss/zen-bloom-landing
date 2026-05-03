@@ -80,14 +80,16 @@ const LocationCTA = () => {
               <ArrowRight className="h-5 w-5" />
             </Button>
           </a>
-           <a
-             href="https://www.instagram.com/espaco_lounge_zen"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="mt-6 inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
-           >
-             <Instagram className="h-4 w-4" /> @espaco_lounge_zen
-           </a>
+           <div className="mt-12">
+             <a
+               href="https://www.instagram.com/espaco_lounge_zen"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
+             >
+               <Instagram className="h-4 w-4" /> @espaco_lounge_zen
+             </a>
+           </div>
         </motion.div>
       </div>
     </section>

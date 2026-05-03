@@ -42,18 +42,25 @@ const Footer = () => {
              >
                <Instagram className="h-4 w-4" />
              </a>
-             {[Facebook, MessageCircle].map((Icon, i) => (
-               <a
-                 key={i}
-                 href="#"
-                 aria-label="Rede social"
-                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all hover:-translate-y-1"
-               >
-                 <Icon className="h-4 w-4" />
-               </a>
-             ))}
+             <a
+               href="http://wa.me/5541998561828"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp"
+               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all hover:-translate-y-1"
+             >
+               <MessageCircle className="h-4 w-4" />
+             </a>
            </div>
-          <p className="mt-6 text-xs text-cream/50">CREFITO 2 · Rio das Ostras, RJ</p>
+           <div className="mt-6 space-y-2">
+             <p className="text-xs text-cream/50 flex items-center gap-2">
+               <Phone className="h-3 w-3" /> (41) 99856-1828
+             </p>
+             <p className="text-xs text-cream/50 flex items-center gap-2 text-lowercase">
+               <MessageCircle className="h-3 w-3" /> zenloungebc@gmail.com
+             </p>
+             <p className="text-xs text-cream/50">CREFITO 2 · Balneário Camboriú, SC</p>
+           </div>
         </div>
       </div>
       <div className="border-t border-cream/10">
