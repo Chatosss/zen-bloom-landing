@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center py-16">
+      <div className="container mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center py-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,11 +54,29 @@ const Hero = () => {
             Saúde & Bem-estar Feminino
           </motion.span>
 
-          <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-charcoal">
+          <h1 className="mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
             Cada respiração é uma chance de se reconectar.
           </h1>
+          
+          {/* Video for Mobile - Hidden on Large screens */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="lg:hidden mt-8 relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
+          >
+            <video
+              src={VIDEO_URL}
+              poster={COVER_URL}
+              loop
+              muted
+              autoPlay
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
 
-          <p className="mt-6 text-lg text-charcoal/75 leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-charcoal/75 leading-relaxed">
             O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase da vida.
           </p>
 
@@ -86,12 +104,12 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Video with overlapping trust badge */}
+        {/* Video with overlapping trust badge - Hidden on Mobile */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="relative mt-8 lg:mt-0"
+          className="relative mt-8 lg:mt-0 hidden lg:block"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
             <video
