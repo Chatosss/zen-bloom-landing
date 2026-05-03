@@ -106,7 +106,7 @@ const serviceData: Record<string, any> = {
   "drenagem-linfatica": {
     category: "Tratamentos",
     title: "Drenagem Linfática Pré e Pós Operatório",
-    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg",
+    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg",
     description: "A Drenagem Linfática é uma técnica de massagem altamente especializada que estimula o sistema linfático a trabalhar de forma mais acelerada, eliminando toxinas e líquidos retidos.",
     extendedDesc: "Nossa abordagem é focada especialmente no período pré e pós-operatório de cirurgias estéticas ou gestacionais. Com toques suaves e precisos, ajudamos o corpo a se recuperar mais rápido, prevenindo fibroses e reduzindo o inchaço de forma segura.",
     benefits: [
