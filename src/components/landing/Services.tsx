@@ -19,7 +19,18 @@ const practices = [
 const treatments = [
   { title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: drenagem },
   { title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: kinesio },
-  { title: "Estética Funcional", desc: "Tratamentos que unem saúde e estética com foco na funcionalidade do corpo.", img: kinesio }, // Placeholder for now
+  { 
+    title: "Estética Funcional", 
+    desc: "Estética funcional é a abordagem terapêutica que une recursos estéticos com objetivos clínicos. Isso inclui tratamentos que, além de melhorar a aparência, atuam sobre dores musculares, retenção de líquidos, perda de tônus e desequilíbrios estruturais.", 
+    img: drenagem,
+    indications: [
+      "Redução de flacidez sem cirurgia",
+      "Fortalecimento muscular",
+      "Melhora da circulação e drenagem linfática",
+      "Redução de dores causadas por contraturas ou edemas",
+      "Sensação de leveza, energia e disposição"
+    ]
+  },
 ];
 
 const Services = () => {
@@ -85,9 +96,20 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
     </div>
-    <div className="p-6">
+    <div className="p-6 flex flex-col h-full">
       <h3 className="font-serif text-xl text-charcoal">{s.title}</h3>
       <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">{s.desc}</p>
+      
+      {s.indications && (
+        <ul className="mt-4 space-y-1.5 border-t border-gold/10 pt-4">
+          {s.indications.map((item: string, idx: number) => (
+            <li key={idx} className="flex items-start gap-2 text-xs text-charcoal/80">
+              <span className="text-gold mt-0.5">•</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
       <button className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn">
         Saber mais
         <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
