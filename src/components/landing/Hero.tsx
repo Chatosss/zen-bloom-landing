@@ -122,9 +122,9 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Floating trust badge — overlaps bottom-right of the video */}
-          <div className="absolute -bottom-6 -right-4 animate-float">
-            <div className="rounded-2xl glass border border-border/60 shadow-elegant p-6 max-w-xs">
+          {/* Floating trust badge — positioned below the video to avoid overlap */}
+          <div className="mt-6 flex justify-end">
+            <div className="rounded-2xl glass border border-border/60 shadow-elegant p-6 max-w-xs animate-float">
               <div className="flex items-center gap-3">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full gradient-gold text-gold-foreground">
                   <Sparkles className="h-6 w-6" />
