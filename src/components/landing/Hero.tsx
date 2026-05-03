@@ -97,6 +97,8 @@ const Hero = () => {
               src={VIDEO_URL}
               poster={COVER_URL}
               loop
+              muted
+              autoPlay
               playsInline
               preload="metadata"
               onPlay={() => setIsPlaying(true)}
