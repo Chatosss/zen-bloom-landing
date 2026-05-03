@@ -7,7 +7,7 @@ const practices = [
   { slug: "hatha-yoga", title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
   { slug: "pilates", title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
   { slug: "yin-yoga", title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-02.jpg" },
-  { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Terapeutico-02.jpeg" },
+  { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg" },
 ];
 
 const treatments = [
