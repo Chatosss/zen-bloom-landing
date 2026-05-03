@@ -67,13 +67,15 @@ const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="gradient-gold text-gold-foreground rounded-full px-8 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.03] transition-transform duration-300"
-            >
-              Quero Agendar Minha Sessão
-              <ArrowRight className="h-5 w-5" />
-            </Button>
+            <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+              <Button
+                size="lg"
+                className="gradient-gold text-gold-foreground rounded-full px-8 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.03] transition-transform duration-300"
+              >
+                Quero Agendar Minha Sessão
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"

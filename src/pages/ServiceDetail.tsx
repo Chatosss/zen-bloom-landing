@@ -295,14 +295,15 @@ const ServiceDetail = () => {
             >
               <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Pronta para começar sua jornada de bem-estar?</h2>
               <p className="text-cream/70 mb-12 text-xl max-w-xl mx-auto">Sinta a transformação em seu corpo e mente com um atendimento exclusivo.</p>
-              <Button 
-                size="lg" 
-                className="gradient-gold text-gold-foreground rounded-full px-12 h-18 text-xl shadow-2xl hover:brightness-90 transition-all font-semibold"
-                onClick={() => window.open("https://wa.me/5522998980808", "_blank")}
-              >
-                <MessageCircle className="h-6 w-6 mr-3" />
-                Quero agendar meu atendimento
-              </Button>
+              <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+                <Button 
+                  size="lg" 
+                  className="gradient-gold text-gold-foreground rounded-full px-12 h-18 text-xl shadow-2xl hover:brightness-90 transition-all font-semibold"
+                >
+                  <MessageCircle className="h-6 w-6 mr-3" />
+                  Quero agendar meu atendimento
+                </Button>
+              </a>
             </motion.div>
           </div>
         </section>

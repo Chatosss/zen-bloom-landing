@@ -54,11 +54,13 @@ const Navbar = ({ isDetail = false }: { isDetail?: boolean }) => {
             </Link>
           )}
         </nav>
-        <Button variant="default" size="sm" className="gradient-gold text-gold-foreground hover:opacity-90 hover:scale-[1.03] transition-all duration-300 shadow-gold rounded-full px-5">
-          <Calendar className="h-4 w-4" />
-          <span className="hidden sm:inline">Agendar Sessão</span>
-          <span className="sm:hidden">Agendar</span>
-        </Button>
+        <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+          <Button variant="default" size="sm" className="gradient-gold text-gold-foreground hover:opacity-90 hover:scale-[1.03] transition-all duration-300 shadow-gold rounded-full px-5">
+            <Calendar className="h-4 w-4" />
+            <span className="hidden sm:inline">Agendar Sessão</span>
+            <span className="sm:hidden">Agendar</span>
+          </Button>
+        </a>
       </div>
     </motion.header>
   );

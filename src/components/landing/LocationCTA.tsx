@@ -71,13 +71,15 @@ const LocationCTA = () => {
           <p className="mt-6 text-sage-foreground/85 max-w-xl mx-auto">
             Comece agora uma jornada de bem-estar com acompanhamento personalizado.
           </p>
-          <Button
-            size="lg"
-            className="mt-10 bg-cream text-charcoal hover:bg-cream/90 rounded-full px-10 h-14 text-base shadow-elegant hover:scale-[1.04] transition-transform animate-soft-pulse"
-          >
-            Iniciar meu acompanhamento
-            <ArrowRight className="h-5 w-5" />
-          </Button>
+          <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+            <Button
+              size="lg"
+              className="mt-10 bg-cream text-charcoal hover:bg-cream/90 rounded-full px-10 h-14 text-base shadow-elegant hover:scale-[1.04] transition-transform animate-soft-pulse"
+            >
+              Iniciar meu acompanhamento
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </a>
           <a
             href="#"
             className="mt-6 inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
