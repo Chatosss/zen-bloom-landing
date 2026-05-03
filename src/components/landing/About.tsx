@@ -65,10 +65,12 @@ const About = () => {
             ))}
           </ul>
 
-          <Button size="lg" className="mt-10 gradient-gold text-gold-foreground rounded-full px-8 h-14 shadow-gold hover:scale-[1.04] transition-transform">
-            <MessageCircle className="h-5 w-5" />
-            Falar com a Kíssila
-          </Button>
+          <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+            <Button size="lg" className="mt-10 gradient-gold text-gold-foreground rounded-full px-8 h-14 shadow-gold hover:scale-[1.04] transition-transform">
+              <MessageCircle className="h-5 w-5" />
+              Falar com a Kíssila
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>
