@@ -13,19 +13,12 @@ const practices = [
 const treatments = [
   { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" },
   { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
-  { 
-    slug: "estetica-funcional",
-    title: "Estética Funcional", 
-    desc: "Estética funcional é a abordagem terapêutica que une recursos estéticos com objetivos clínicos. Isso inclui tratamentos que, além de melhorar a aparência, atuam sobre dores musculares, retenção de líquidos, perda de tônus e desequilíbrios estruturais.", 
-    img: "https://leonardopages.com/wp-content/uploads/2026/05/hee.webp",
-    indications: [
-      "Redução de flacidez sem cirurgia",
-      "Fortalecimento muscular",
-      "Melhora da circulação e drenagem linfática",
-      "Redução de dores causadas por contraturas ou edemas",
-      "Sensação de leveza, energia e disposição"
-    ]
-  },
+   { 
+     slug: "estetica-funcional",
+     title: "Estética Funcional", 
+     desc: "Abordagem terapêutica que une recursos estéticos com objetivos clínicos para resultados de dentro para fora.", 
+     img: "https://leonardopages.com/wp-content/uploads/2026/05/hee.webp"
+   },
 ];
 
 const Services = () => {

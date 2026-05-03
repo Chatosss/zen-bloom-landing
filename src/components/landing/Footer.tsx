@@ -20,10 +20,10 @@ const Footer = () => {
           <ul className="mt-4 space-y-2 text-sm">
             {isHomePage ? (
               <>
-                <li><a href="#hero" className="hover:text-gold transition-colors">Início</a></li>
-                <li><a href="#servicos" className="hover:text-gold transition-colors">Práticas</a></li>
-                <li><a href="#sobre" className="hover:text-gold transition-colors">Sobre Kíssila</a></li>
-                <li><a href="#contato" className="hover:text-gold transition-colors">Contato</a></li>
+                 <li><a href="#hero" className="hover:text-gold transition-colors">Início</a></li>
+                 <li><a href="#servicos" className="hover:text-gold transition-colors">Práticas</a></li>
+                 <li><a href="#sobre" className="hover:text-gold transition-colors">Sobre Simone</a></li>
+                 <li><a href="#contato" className="hover:text-gold transition-colors">Contato</a></li>
               </>
             ) : (
               <li><Link to="/" className="hover:text-gold transition-colors">Voltar para Início</Link></li>
@@ -32,18 +32,27 @@ const Footer = () => {
         </div>
         <div>
           <p className="font-serif text-lg text-cream">Conecte-se</p>
-          <div className="mt-4 flex gap-3">
-            {[Instagram, Facebook, MessageCircle].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="Rede social"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all hover:-translate-y-1"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
+           <div className="mt-4 flex gap-3">
+             <a
+               href="https://www.instagram.com/espaco_lounge_zen"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram"
+               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all hover:-translate-y-1"
+             >
+               <Instagram className="h-4 w-4" />
+             </a>
+             {[Facebook, MessageCircle].map((Icon, i) => (
+               <a
+                 key={i}
+                 href="#"
+                 aria-label="Rede social"
+                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 hover:border-gold hover:text-gold transition-all hover:-translate-y-1"
+               >
+                 <Icon className="h-4 w-4" />
+               </a>
+             ))}
+           </div>
           <p className="mt-6 text-xs text-cream/50">CREFITO 2 · Rio das Ostras, RJ</p>
         </div>
       </div>

@@ -20,12 +20,12 @@ const LocationCTA = () => {
           <p className="mt-5 text-charcoal/70 leading-relaxed max-w-md">
             Atendimento individual e em pequenos grupos. Agende sua visita e conheça nosso espaço pensado em cada detalhe.
           </p>
-          <ul className="mt-8 space-y-4">
-            <li className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-gold mt-0.5" />
-              <span className="text-charcoal/85">Rio das Ostras, RJ — Brasil</span>
-            </li>
-            <li className="flex items-start gap-3">
+           <ul className="mt-8 space-y-4">
+             <li className="flex items-start gap-3">
+               <MapPin className="h-5 w-5 text-gold mt-0.5" />
+               <span className="text-charcoal/85">Edifício La Belle Rua 2000, nº 121 – Sala 10 CEP 88330-414</span>
+             </li>
+             <li className="flex items-start gap-3">
               <Clock className="h-5 w-5 text-gold mt-0.5" />
               <span className="text-charcoal/85">Seg a Sex · 7h às 20h &nbsp;·&nbsp; Sáb · 8h às 13h</span>
             </li>
@@ -43,13 +43,13 @@ const LocationCTA = () => {
           transition={{ duration: 0.8 }}
           className="rounded-3xl overflow-hidden shadow-elegant border border-border/60"
         >
-          <iframe
-            title="Mapa Espaço Lounge Zen — Rio das Ostras"
-            src="https://www.google.com/maps?q=Rio+das+Ostras+RJ&output=embed"
-            className="w-full h-[420px] grayscale-[0.2]"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+           <iframe
+             title="Mapa Espaço Lounge Zen — Balneário Camboriú"
+             src="https://www.google.com/maps?q=Edifício+La+Belle+Rua+2000+121+Balneário+Camboriú&output=embed"
+             className="w-full h-[420px] grayscale-[0.2]"
+             loading="lazy"
+             referrerPolicy="no-referrer-when-downgrade"
+           />
         </motion.div>
       </div>
 
@@ -80,12 +80,14 @@ const LocationCTA = () => {
               <ArrowRight className="h-5 w-5" />
             </Button>
           </a>
-          <a
-            href="#"
-            className="mt-6 inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
-          >
-            <Instagram className="h-4 w-4" /> @espacoloungezen
-          </a>
+           <a
+             href="https://www.instagram.com/espaco_lounge_zen"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="mt-6 inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
+           >
+             <Instagram className="h-4 w-4" /> @espaco_lounge_zen
+           </a>
         </motion.div>
       </div>
     </section>
