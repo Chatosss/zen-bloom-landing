@@ -123,8 +123,12 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased overflow-x-hidden w-full;
     font-feature-settings: "ss01", "cv11";
+  }
+
+  #root {
+    @apply overflow-x-hidden w-full;
   }
 
   h1, h2, h3, h4, h5 {
