@@ -95,9 +95,5 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
     </div>
   </motion.article>
 );
-      </div>
-    </section>
-  );
-};
 
 export default Services;
