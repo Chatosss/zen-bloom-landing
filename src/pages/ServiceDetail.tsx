@@ -74,7 +74,7 @@ const serviceData: Record<string, any> = {
   "yoga-terapeutico": {
     category: "Práticas",
     title: "Yoga Terapêutico",
-    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Terapeutico-01.jpg",
+    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg",
     description: "O Yoga Terapêutico aplica as ferramentas do yoga de forma individualizada para auxiliar no tratamento de condições específicas de saúde, dores crônicas ou recuperação funcional.",
     extendedDesc: "Cada sessão é adaptada às limitações e necessidades da aluna. Utilizamos acessórios (props) para garantir conforto e segurança, focando na reabilitação gentil e no reequilíbrio dos sistemas do corpo.",
     benefits: [
