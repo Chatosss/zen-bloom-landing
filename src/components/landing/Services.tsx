@@ -40,9 +40,6 @@ const Services = () => {
 
 
         <div className="mt-16">
-          <h3 className="font-serif text-2xl text-charcoal mb-8 border-b border-gold/20 pb-2 inline-block">
-            Práticas de Saúde e Bem Estar
-          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {practices.map((s, i) => (
               <ServiceCard key={s.title} s={s} i={i} />
