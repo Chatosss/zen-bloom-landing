@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Pause, Sparkles } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/hero.jpg";
 
@@ -9,7 +9,17 @@ const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.web
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.play().catch(error => {
+        console.log("Autoplay with sound was blocked by the browser:", error);
+        setIsPlaying(false);
+      });
+    }
+  }, []);
 
   const togglePlay = () => {
     const v = videoRef.current;
@@ -65,14 +75,15 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="lg:hidden mt-8 relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
           >
-             <video
-               src={VIDEO_URL}
-               poster={COVER_URL}
-               loop
-               autoPlay
-               playsInline
-               className="h-full w-full object-cover"
-             />
+            <video
+              src={VIDEO_URL}
+              poster={COVER_URL}
+              loop
+              autoPlay
+              playsInline
+              muted={false}
+              className="h-full w-full object-cover"
+            />
           </motion.div>
 
           <p className="mt-6 text-base sm:text-lg text-charcoal/75 leading-relaxed">
@@ -111,18 +122,19 @@ const Hero = () => {
           className="relative mt-8 lg:mt-0 hidden lg:block"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
-             <video
-               ref={videoRef}
-               src={VIDEO_URL}
-               poster={COVER_URL}
-               loop
-               autoPlay
-               playsInline
-               preload="metadata"
-               onPlay={() => setIsPlaying(true)}
-               onPause={() => setIsPlaying(false)}
-               className="h-full w-full object-cover"
-             />
+            <video
+              ref={videoRef}
+              src={VIDEO_URL}
+              poster={COVER_URL}
+              loop
+              autoPlay
+              playsInline
+              muted={false}
+              preload="auto"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              className="h-full w-full object-cover"
+            />
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
             {/* Play / Pause button */}
