@@ -65,15 +65,14 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="lg:hidden mt-8 relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
           >
-            <video
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              muted
-              autoPlay
-              playsInline
-              className="h-full w-full object-cover"
-            />
+             <video
+               src={VIDEO_URL}
+               poster={COVER_URL}
+               loop
+               autoPlay
+               playsInline
+               className="h-full w-full object-cover"
+             />
           </motion.div>
 
           <p className="mt-6 text-base sm:text-lg text-charcoal/75 leading-relaxed">
@@ -112,19 +111,18 @@ const Hero = () => {
           className="relative mt-8 lg:mt-0 hidden lg:block"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
-            <video
-              ref={videoRef}
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              muted
-              autoPlay
-              playsInline
-              preload="metadata"
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              className="h-full w-full object-cover"
-            />
+             <video
+               ref={videoRef}
+               src={VIDEO_URL}
+               poster={COVER_URL}
+               loop
+               autoPlay
+               playsInline
+               preload="metadata"
+               onPlay={() => setIsPlaying(true)}
+               onPause={() => setIsPlaying(false)}
+               className="h-full w-full object-cover"
+             />
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
             {/* Play / Pause button */}
