@@ -14,9 +14,9 @@ const LocationCTA = () => {
           transition={{ duration: 0.7 }}
         >
           <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Localização</span>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Um refúgio em <span className="italic text-sage-deep">Rio das Ostras</span>
-          </h2>
+           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
+             Um refúgio em <span className="italic text-sage-deep">Balneário Camboriú</span>
+           </h2>
           <p className="mt-5 text-charcoal/70 leading-relaxed max-w-md">
             Atendimento individual e em pequenos grupos. Agende sua visita e conheça nosso espaço pensado em cada detalhe.
           </p>
