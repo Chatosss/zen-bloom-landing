@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BadgeCheck, GraduationCap, MessageCircle, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const credentials = [
   { icon: BadgeCheck, label: "CREFITO 2 — Fisioterapeuta registrada" },
   { icon: GraduationCap, label: "Especialista em Saúde da Mulher" },
@@ -10,7 +11,14 @@ const credentials = [
 const About = () => {
   return (
     <section id="sobre" className="py-24 lg:py-32 bg-background">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-center">
+        <div className="lg:hidden">
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Quem cuidará de você</span>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-charcoal leading-tight">
+            Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
+          </h2>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -20,8 +28,8 @@ const About = () => {
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
             <img
-               src="https://leonardopages.com/wp-content/uploads/2026/05/Kissila-Santos.jpg"
-               alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
+              src="https://leonardopages.com/wp-content/uploads/2026/05/Kissila-Santos.jpg"
+              alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
               loading="lazy"
               width={1024}
               height={1280}
@@ -32,9 +40,9 @@ const About = () => {
             <p className="font-serif text-2xl text-gold leading-none">10+</p>
             <p className="mt-1 text-sm text-charcoal/70">anos cuidando da saúde feminina com excelência</p>
           </div>
-           <div className="absolute -top-6 -left-4 hidden sm:block rounded-full gradient-sage text-sage-foreground px-5 py-2 shadow-soft">
-             <span className="text-xs uppercase tracking-[0.2em]">Simone Santos Parolin</span>
-           </div>
+          <div className="absolute -top-6 -left-4 hidden sm:block rounded-full gradient-sage text-sage-foreground px-5 py-2 shadow-soft">
+            <span className="text-xs uppercase tracking-[0.2em]">Simone Santos Parolin</span>
+          </div>
         </motion.div>
 
         <motion.div
@@ -43,10 +51,12 @@ const About = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Quem cuidará de você</span>
-           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-             Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
-           </h2>
+          <div className="hidden lg:block">
+            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Quem cuidará de você</span>
+            <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
+              Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
+            </h2>
+          </div>
           <p className="mt-6 text-charcoal/75 leading-relaxed text-lg">
             Fisioterapeuta especialista na saúde da mulher. Minha missão é guiar você em uma jornada de autocuidado com segurança técnica e acolhimento.
           </p>
@@ -66,10 +76,10 @@ const About = () => {
           </ul>
 
           <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
-             <Button size="lg" className="mt-10 gradient-gold text-gold-foreground rounded-full px-8 h-14 shadow-gold hover:scale-[1.04] transition-transform">
-               <MessageCircle className="h-5 w-5" />
-               Falar com a Simone
-             </Button>
+            <Button size="lg" className="mt-10 gradient-gold text-gold-foreground rounded-full px-8 h-14 shadow-gold hover:scale-[1.04] transition-transform">
+              <MessageCircle className="h-5 w-5" />
+              Falar com a Simone
+            </Button>
           </a>
         </motion.div>
       </div>
