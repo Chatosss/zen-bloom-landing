@@ -15,8 +15,7 @@ const Hero = () => {
     const v = videoRef.current;
     if (v) {
       v.play().catch(error => {
-        console.log("Autoplay with sound was blocked by the browser:", error);
-        setIsPlaying(false);
+        console.log("Autoplay failed:", error);
       });
     }
   }, []);
@@ -81,7 +80,7 @@ const Hero = () => {
               loop
               autoPlay
               playsInline
-              muted={false}
+              muted
               className="h-full w-full object-cover"
             />
           </motion.div>
@@ -129,7 +128,7 @@ const Hero = () => {
               loop
               autoPlay
               playsInline
-              muted={false}
+              muted
               preload="auto"
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
