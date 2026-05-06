@@ -35,10 +35,12 @@ const Authority = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Atendimento com base técnica e experiência comprovada</span>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Cuidado especializado para aliviar dores, promover relaxamento e melhorar sua qualidade de vida com segurança.
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
+            Atendimento com base técnica e experiência comprovada
           </h2>
+          <p className="mt-6 text-base sm:text-lg text-charcoal/70 leading-relaxed max-w-2xl mx-auto">
+            Cuidado especializado para aliviar dores, promover relaxamento e melhorar sua qualidade de vida com segurança.
+          </p>
         </motion.div>
 
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
