@@ -76,17 +76,21 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Yin Yoga",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-01.jpg",
-    description: "O Yin Yoga é uma prática profunda e meditativa que foca nos tecidos conjuntivos do corpo (fáscias, ligamentos e articulações), através de permanências longas em posturas passivas.",
-    extendedDesc: "Diferente de práticas mais dinâmicas, o Yin convida à quietude. É um poderoso antídoto para o ritmo acelerado da vida moderna, permitindo uma liberação profunda de tensões físicas e bloqueios emocionais acumulados.",
+    description: "O Yin Yoga é uma prática mais introspectiva, caracterizada por posturas suaves mantidas por períodos mais longos.",
+    extendedDesc: "Essa permanência estimula o alongamento profundo dos tecidos conjuntivos e favorece o relaxamento do corpo e da mente conduzindo a um estado meditativo.",
     benefits: [
-      "Melhora profunda da mobilidade articular",
-      "Liberação miofascial e redução de rigidez",
-      "Estimula o fluxo de energia vital (Chi/Prana)",
-      "Aprofunda a capacidade de meditação e presença",
-      "Regula o sistema nervoso parassimpático",
-      "Promove paciência e aceitação emocional"
+      "Relaxamento profundo",
+      "Liberação de tensões musculares",
+      "Melhora da mobilidade articular",
+      "Redução de estresse e ansiedade",
+      "Sensação de bem-estar"
     ],
-    whoIsItFor: "Ideal para quem sente o corpo rígido, está sob alto estresse ou busca uma prática complementar a exercícios intensos."
+    whoIsItFor: [
+      "Pessoas que buscam desacelerar o ritmo do dia a dia",
+      "Quem deseja reduzir níveis de estresse",
+      "Pessoas com tensão muscular acumulada",
+      "Quem busca práticas suaves e meditativas"
+    ]
   },
   "yoga-terapeutico": {
     category: "Práticas",
@@ -237,6 +241,7 @@ const ServiceDetail = () => {
                    service.title === "Pilates" ? "Reeducação corporal e estabilização profunda" :
                    service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
                    service.title === "Yoga Terapêutico" ? "Abordagem funcional e reabilitadora" :
+                   service.title === "Yin Yoga" ? "Relaxamento profundo e liberação de tensões" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
                    service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
@@ -284,7 +289,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
+                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -318,7 +323,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="w-full">
                 <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
+                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
                 </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
@@ -367,6 +372,8 @@ const ServiceDetail = () => {
                     ? "Agendar aplicação de Kinesio Taping"
                     : service.title === "Yoga Terapêutico"
                     ? "Agendar sessão de Yoga Terapêutico"
+                    : service.title === "Yin Yoga"
+                    ? "Agendar aula de Yin Yoga"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
