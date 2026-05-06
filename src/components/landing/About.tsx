@@ -28,7 +28,7 @@ const About = () => {
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
             <img
-              src="https://leonardopages.com/wp-content/uploads/2026/05/Kissila-Santos.jpg"
+              src="https://leonardopages.com/wp-content/uploads/2026/05/09-scaled.jpg"
               alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
               loading="lazy"
               width={1024}
