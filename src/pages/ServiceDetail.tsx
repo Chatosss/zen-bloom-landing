@@ -336,7 +336,7 @@ const ServiceDetail = () => {
               <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
                 <Button
                   size="lg"
-                  className="gradient-gold text-gold-foreground rounded-full px-8 md:px-12 py-6 md:py-8 h-auto text-lg md:text-xl shadow-2xl hover:brightness-90 transition-all font-semibold whitespace-normal max-w-full"
+                  className="gradient-gold text-gold-foreground rounded-full px-6 md:px-12 py-4 md:py-8 h-auto text-base md:text-xl shadow-2xl hover:brightness-90 transition-all font-semibold whitespace-normal max-w-full"
                 >
                   <MessageCircle className="hidden md:block h-6 w-6 mr-3 shrink-0" />
                   {service.title === "Yoga Gestacional" 
