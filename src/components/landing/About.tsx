@@ -3,9 +3,9 @@ import { BadgeCheck, GraduationCap, MessageCircle, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const credentials = [
-  { icon: BadgeCheck, label: "CREFITO 2 — Fisioterapeuta registrada" },
+  { icon: BadgeCheck, label: "CREFITO 2 - Fisioterapeuta registrada" },
   { icon: GraduationCap, label: "Especialista em Saúde da Mulher" },
-  { icon: Globe2, label: "Mestrado em Yoga — Índia" },
+  { icon: Globe2, label: "Mestrado em Yoga - Índia" },
 ];
 
 const About = () => {

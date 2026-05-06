@@ -10,12 +10,12 @@ const items = [
   {
     icon: HeartPulse,
     title: "Especialização em reabilitação",
-    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida.",
+    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida",
   },
   {
     icon: Brain,
     title: "Abordagem integrada entre corpo e mente",
-    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo.",
+    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo",
   },
   {
     icon: ShieldCheck,
@@ -25,7 +25,7 @@ const items = [
   {
     icon: Users,
     title: "Exclusivo para mulheres",
-    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino.",
+    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino",
   },
 ];
 
