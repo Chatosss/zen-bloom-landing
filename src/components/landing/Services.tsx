@@ -32,9 +32,9 @@ const Services = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Práticas</span>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Práticas de Saúde e Bem Estar
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Nossas Práticas de Bem-Estar</span>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight text-center">
+            Conheça as práticas que proporcionam a redução de estresse e o alívio de tensões equilibrando o corpo e a mente, permitindo que você entre em conexão com você mesma.
           </h2>
         </motion.div>
 

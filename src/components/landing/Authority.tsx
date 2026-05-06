@@ -40,9 +40,9 @@ const Authority = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">DIFERENCIAIS</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Atendimento com base técnica e experiência comprovada</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Muito mais que movimento. <span className="block italic text-sage-deep">Uma reabilitação completa.</span>
+            Cuidado especializado para aliviar dores, promover relaxamento e melhorar sua qualidade de vida com segurança.
           </h2>
         </motion.div>
 
