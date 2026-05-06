@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Ambiente exclusivo e acolhedor para o público feminino.",
-  "Equipamentos modernos de Pilates e Yoga.",
-  "Atendimento fisioterapêutico especializado.",
-  "Foco no equilíbrio entre saúde, beleza e bem-estar.",
-  "Privacidade e conforto em cada detalhe.",
-  "Profissionais altamente qualificadas.",
+  "Ambiente exclusivo e acolhedor para o público feminino",
+  "Equipamentos modernos de Pilates e Yoga",
+  "Atendimento somático especializado",
+  "Foco no equilíbrio entre saúde, beleza e bem-estar",
+  "Privacidade e conforto em cada detalhe",
+  "Profissionais altamente qualificadas",
 ];
 
 const Benefits = () => {
@@ -21,12 +21,12 @@ const Benefits = () => {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Por que nos escolher</span>
+            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">PROPORCIONA A VOCÊ</span>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
               Espaço Lounge Zen proporciona a você...
             </h2>
             <p className="mt-6 text-charcoal/70 leading-relaxed text-lg">
-              Um conceito único de cuidado integral, onde cada detalhe foi planejado para oferecer uma experiência de relaxamento e transformação.
+              Um conceito único de cuidado integral, onde cada detalhe foi planejado para oferecer uma experiência de relaxamento e transformação
             </p>
           </motion.div>
 
