@@ -5,27 +5,22 @@ const items = [
   {
     icon: Award,
     title: "Formação nacional e internacional",
-    text: "Conhecimento técnico sólido com especializações nacionais e vivência direta na Índia.",
   },
   {
     icon: HeartPulse,
     title: "Especialização em reabilitação",
-    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida",
   },
   {
     icon: Brain,
     title: "Abordagem integrada entre corpo e mente",
-    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo",
   },
   {
     icon: ShieldCheck,
     title: "Atendimento individualizado e seguro",
-    text: "Protocolos personalizados para as necessidades únicas de cada paciente.",
   },
   {
     icon: Users,
     title: "Exclusivo para mulheres",
-    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino",
   },
 ];
 
@@ -61,7 +56,6 @@ const Authority = () => {
                 <it.icon className="h-7 w-7" />
               </span>
               <h3 className="mt-6 font-serif text-2xl text-charcoal">{it.title}</h3>
-              <p className="mt-3 text-charcoal/70 leading-relaxed">{it.text}</p>
             </motion.div>
           ))}
         </div>
