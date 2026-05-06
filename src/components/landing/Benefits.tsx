@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import kissila from "@/assets/kissila.jpg";
 
 const benefits = [
   "Equilíbrio entre corpo e mente",
@@ -27,7 +26,7 @@ const Benefits = () => {
           >
             <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant border border-border/40">
               <img
-                src={kissila}
+                src="https://leonardopages.com/wp-content/uploads/2026/05/65d626f4-5add-4bb3-a8f5-d0c3485eb03b.jpg"
                 alt="Espaço Lounge Zen"
                 className="h-full w-full object-cover"
                 loading="lazy"
