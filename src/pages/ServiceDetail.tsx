@@ -134,19 +134,28 @@ const serviceData: Record<string, any> = {
   },
   "drenagem-linfatica": {
     category: "Tratamentos",
-    title: "Drenagem Linfática Pré e Pós Operatório",
+    title: "Drenagem Linfática",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-02.jpg",
-    description: "A Drenagem Linfática é uma técnica de massagem altamente especializada que estimula o sistema linfático a trabalhar de forma mais acelerada, eliminando toxinas e líquidos retidos.",
-    extendedDesc: "Nossa abordagem é focada especialmente no período pré e pós-operatório de cirurgias estéticas ou gestacionais. Com toques suaves e precisos, ajudamos o corpo a se recuperar mais rápido, prevenindo fibroses e reduzindo o inchaço de forma segura.",
-    benefits: [
-      "Redução significativa de inchaço e retenção de líquidos",
-      "Aceleração da cicatrização pós-cirúrgica",
-      "Prevenção de fibroses e aderências cicatriciais",
-      "Desintoxicação do organismo",
-      "Sensação imediata de leveza e bem-estar",
-      "Estímulo ao sistema imunológico"
+    description: "A drenagem linfática é uma técnica manual específica que estimula o sistema linfático, favorecendo a eliminação de líquidos intersticiais e toxinas acumuladas.",
+    extendedDesc: [
+      "No pós-operatório, é fundamental para reduzir edemas, prevenir fibroses, auxiliar na reorganização do tecido cicatricial e melhorar a oxigenação tecidual.",
+      "O protocolo respeita o tempo cirúrgico, a resposta inflamatória do organismo e as orientações médicas."
     ],
-    whoIsItFor: "Mulheres em período pré ou pós-operatório, gestantes ou quem sofre com inchaço e pernas cansadas."
+    benefits: [
+      "Redução de edemas e hematomas",
+      "Prevenção de fibroses",
+      "Melhora da cicatrização",
+      "Estímulo à circulação linfática",
+      "Recuperação mais confortável"
+    ],
+    whoIsItFor: [
+      "Gestantes",
+      "Pós-operatório corporal",
+      "Pós-operatório facial",
+      "Retenção de líquidos",
+      "Estímulo à circulação linfática",
+      "Inchaços recorrentes"
+    ]
   },
   "estetica-funcional": {
     category: "Tratamentos",
@@ -242,6 +251,7 @@ const ServiceDetail = () => {
                    service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
                    service.title === "Yoga Terapêutico" ? "Abordagem funcional e reabilitadora" :
                    service.title === "Yin Yoga" ? "Relaxamento profundo e liberação de tensões" :
+                   service.title === "Drenagem Linfática" ? "Estímulo circulatório e recuperação tecidual" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
                    service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
@@ -289,7 +299,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
+                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga", "Drenagem Linfática"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -323,7 +333,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="w-full">
                 <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
+                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico", "Yin Yoga", "Drenagem Linfática"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
                 </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
@@ -374,6 +384,8 @@ const ServiceDetail = () => {
                     ? "Agendar sessão de Yoga Terapêutico"
                     : service.title === "Yin Yoga"
                     ? "Agendar aula de Yin Yoga"
+                    : service.title === "Drenagem Linfática"
+                    ? "Agendar sessão de drenagem"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
