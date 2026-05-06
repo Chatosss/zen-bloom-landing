@@ -5,20 +5,20 @@ import { Link } from "react-router-dom";
 const practices = [
   { slug: "yoga-gestacional", title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
   { slug: "hatha-yoga", title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
-  { slug: "pilates", title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
-  { slug: "yin-yoga", title: "Yin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-21-at-11.29.14.jpeg" },
+  { slug: "vin-yoga", title: "Vin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-21-at-11.29.14.jpeg" },
   { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg" },
+  { slug: "pilates", title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
 ];
 
 const treatments = [
   { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" },
   { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
-   { 
-     slug: "estetica-funcional",
-     title: "Estética Funcional", 
-     desc: "Abordagem terapêutica que une recursos estéticos com objetivos clínicos para resultados de dentro para fora.", 
-     img: "https://leonardopages.com/wp-content/uploads/2026/05/hee.webp"
-   },
+  { 
+    slug: "estetica-funcional",
+    title: "Estética Funcional", 
+    desc: "Abordagem terapêutica que une recursos estéticos com objetivos clínicos para resultados de dentro para fora.", 
+    img: "https://leonardopages.com/wp-content/uploads/2026/05/hee.webp"
+  },
 ];
 
 const Services = () => {
