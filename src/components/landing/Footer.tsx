@@ -65,8 +65,7 @@ const Footer = () => {
       </div>
       <div className="border-t border-cream/10">
         <div className="container mx-auto py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-cream/50">
-          <p>© {new Date().getFullYear()} Espaço Lounge Zen. Todos os direitos reservados.</p>
-          <p>Feito com cuidado · Saúde e bem-estar feminino</p>
+          <p>Espaço Lounge Zen – Todos os direitos reservados | Copyright 2026 ©</p>
         </div>
       </div>
     </footer>

@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const benefits = [
-  "Ambiente exclusivo e acolhedor para o público feminino",
-  "Equipamentos modernos de Pilates e Yoga",
-  "Atendimento somático especializado",
-  "Foco no equilíbrio entre saúde, beleza e bem-estar",
-  "Privacidade e conforto em cada detalhe",
-  "Profissionais altamente qualificadas",
+  "Equilíbrio entre corpo e mente",
+  "Alívio de dores na coluna, articulações e tensões musculares",
+  "Acompanhamento especializado em processos pré e pós-operatórios",
+  "Estética Funcional em uma abordagem terapêutica unindo procedimentos estéticos a saúde integral.",
+  "Cuidado seguro e orientado durante o período gestacional",
+  "Melhora da postura, mobilidade e qualidade de vida",
+  "Um ambiente acolhedor para desacelerar, reduzir a ansiedade e reconectar-se",
 ];
 
 const Benefits = () => {
@@ -23,11 +25,13 @@ const Benefits = () => {
           >
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">PROPORCIONA A VOCÊ</span>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-              Espaço Lounge Zen proporciona a você...
+              Espaço Lounge Zen proporciona a você…
             </h2>
-            <p className="mt-6 text-charcoal/70 leading-relaxed text-lg">
-              Um conceito único de cuidado integral, onde cada detalhe foi planejado para oferecer uma experiência de relaxamento e transformação
-            </p>
+            <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+              <Button size="lg" className="mt-10 gradient-gold text-gold-foreground rounded-full px-8 h-14 shadow-gold hover:scale-[1.04] transition-transform">
+                Quero agendar meu atendimento
+              </Button>
+            </a>
           </motion.div>
 
           <motion.div

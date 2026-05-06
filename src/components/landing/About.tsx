@@ -13,9 +13,9 @@ const About = () => {
     <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-center">
         <div className="lg:hidden">
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">QUEM CUIDARÁ DE VOCÊ</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-charcoal leading-tight">
-            Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
+            Simone Santos Parolin
           </h2>
         </div>
 
@@ -52,24 +52,41 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className="hidden lg:block">
-            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">QUEM CUIDARÁ DE VOCÊ</span>
+            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-              Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
+              Simone Santos Parolin
             </h2>
           </div>
           <p className="mt-6 text-charcoal/75 leading-relaxed text-lg">
-            Fisioterapeuta especialista na saúde da mulher. Minha missão é guiar você em uma jornada de autocuidado com segurança técnica e acolhimento. Trago na bagagem especializações em reabilitação e um Mestrado em Yoga realizado na Índia, garantindo um olhar completo sobre suas necessidades - do corpo à mente.
+            Profissional da área da saúde com ampla formação acadêmica e especializações nacionais e internacionais nas áreas de Yoga, Pilates, Estética, Reabilitação e Terapias Corporais. Sua atuação une conhecimento técnico, experiêcia prática e uma abordagem humanizada, oferecendo atendimento individualizado e seguro.
           </p>
 
-          <ul className="mt-8 space-y-3">
-            {credentials.map((c) => (
-              <li key={c.label} className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sage-deep">
-                  <c.icon className="h-4 w-4" />
-                </span>
-                <span className="text-charcoal/85">{c.label}</span>
-              </li>
-            ))}
+          <h3 className="mt-8 font-serif text-xl text-charcoal">Formação Acadêmica</h3>
+          <ul className="mt-4 space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Bacharel em Educação Física – Universidade Positivo (Curitiba/PR)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Pós-graduação em Estética – Faculdade Finaci (São Paulo)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Pós-graduação em Pré e Pós-operatório – Faculdade Finaci (São Paulo)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Pós-graduação em Pilates – PhysicalMind Institute (Nova York)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Pós-graduação em Yoga</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-0.5 inline-flex h-2 w-2 rounded-full bg-gold shrink-0" />
+              <span className="text-charcoal/85">Pós-graduação em Estética – UniBF</span>
+            </li>
           </ul>
 
           <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">

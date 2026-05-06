@@ -3,22 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const practices = [
-  { slug: "yoga-gestacional", title: "Yoga Gestacional", desc: "Movimento consciente e respiração para acolher a maternidade com leveza.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
-  { slug: "hatha-yoga", title: "Hatha Yoga", desc: "Posturas clássicas que constroem força, equilíbrio e presença.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
-  { slug: "vin-yoga", title: "Vin Yoga", desc: "Práticas longas e meditativas para soltar tensões físicas e emocionais.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-21-at-11.29.14.jpeg" },
-  { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Sequências individualizadas para alívio de dores e reabilitação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg" },
-  { slug: "pilates", title: "Pilates", desc: "Fortalecimento profundo, postura e mobilidade com precisão técnica.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
-];
-
-const treatments = [
-  { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós Operatório", desc: "Atendimento pré e pós-operatório com toque preciso e acolhedor.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" },
-  { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Aplicação de bandagens funcionais para suporte muscular e analgesia.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
-  { 
-    slug: "estetica-funcional",
-    title: "Estética Funcional", 
-    desc: "Abordagem terapêutica que une recursos estéticos com objetivos clínicos para resultados de dentro para fora.", 
-    img: "https://leonardopages.com/wp-content/uploads/2026/05/hee.webp"
-  },
+  { slug: "yoga-gestacional", title: "Yoga Gestacional", desc: "Prática de yoga adaptada às transformações físicas e hormonais da gestação, com movimentos suaves, técnicas respiratórias e exercícios que promovem conforto, equilíbrio e preparo para o parto.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-02.jpg" },
+  { slug: "hatha-yoga", title: "Hatha Yoga", desc: "Prática fundamentada nas raízes do Yoga tradicional, que busca promover equilíbrio entre corpo e mente através da integração de posturas (ásanas), técnicas respiratórias (pranayamas) e momentos de relaxamento e meditação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-02.jpg" },
+  { slug: "pilates", title: "Pilates", desc: "É um Condicionamento físico e mental focado em fortalecimento, postura, flexibilidade e reabilitação, respeitando os limites e as necessidades individuais de cada pessoa.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
+  { slug: "vin-yoga", title: "Yin Yoga", desc: "Prática derivada do Hatha Yoga, com abordagem mais contemplativa e profunda. Os movimentos são realizados com posturas suaves e permanências mais longas, estimulando o relaxamento muscular e a liberação de tensões acumuladas.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-21-at-11.29.14.jpeg" },
+  { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Prática adaptada do Yoga clássico com base científica e foco terapêutico, desenvolvida para atender as necessidades do corpo moderno.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg" },
+  { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Bandagem terapêutica que auxilia na estabilização muscular, redução de dores e melhora da circulação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
+  { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós-operatório", desc: "Técnica terapêutica que auxilia na redução de edemas, melhora da circulação e recuperação tecidual. Indicado para: Pacientes em pré e pós-operatório, pessoas com retenção de líquidos e inchaços, redução de edemas e relaxamento.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" },
 ];
 
 const Services = () => {
@@ -32,30 +23,17 @@ const Services = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Práticas</span>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Práticas de Saúde e Bem Estar
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Nossas Práticas de Bem-Estar</span>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight text-center">
+            Conheça as práticas que proporcionam a redução de estresse e o alívio de tensões equilibrando o corpo e a mente, permitindo que você entre em conexão com você mesma.
           </h2>
         </motion.div>
 
 
-        <div className="mt-16">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {practices.map((s, i) => (
-              <ServiceCard key={s.title} s={s} i={i} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-24">
-          <h3 className="font-serif text-2xl text-charcoal mb-8 border-b border-gold/20 pb-2 inline-block">
-            Tratamentos
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {treatments.map((s, i) => (
-              <ServiceCard key={s.title} s={s} i={i} />
-            ))}
-          </div>
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {practices.map((s, i) => (
+            <ServiceCard key={s.title} s={s} i={i} />
+          ))}
         </div>
       </div>
     </section>
@@ -99,7 +77,7 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
         to={`/${s.slug}`}
         className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn"
       >
-        Saber mais
+        Entender tratamento
         <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
       </Link>
     </div>

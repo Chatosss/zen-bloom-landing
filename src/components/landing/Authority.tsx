@@ -5,27 +5,22 @@ const items = [
   {
     icon: Award,
     title: "Formação nacional e internacional",
-    text: "Conhecimento técnico sólido com especializações nacionais e vivência direta na Índia.",
   },
   {
     icon: HeartPulse,
     title: "Especialização em reabilitação",
-    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida",
   },
   {
     icon: Brain,
     title: "Abordagem integrada entre corpo e mente",
-    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo",
   },
   {
     icon: ShieldCheck,
     title: "Atendimento individualizado e seguro",
-    text: "Protocolos personalizados para as necessidades únicas de cada paciente.",
   },
   {
     icon: Users,
     title: "Exclusivo para mulheres",
-    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino",
   },
 ];
 
@@ -40,9 +35,9 @@ const Authority = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">DIFERENCIAIS</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Atendimento com base técnica e experiência comprovada</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Muito mais que movimento. <span className="block italic text-sage-deep">Uma reabilitação completa.</span>
+            Cuidado especializado para aliviar dores, promover relaxamento e melhorar sua qualidade de vida com segurança.
           </h2>
         </motion.div>
 
@@ -61,7 +56,6 @@ const Authority = () => {
                 <it.icon className="h-7 w-7" />
               </span>
               <h3 className="mt-6 font-serif text-2xl text-charcoal">{it.title}</h3>
-              <p className="mt-3 text-charcoal/70 leading-relaxed">{it.text}</p>
             </motion.div>
           ))}
         </div>
