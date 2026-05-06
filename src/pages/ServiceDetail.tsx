@@ -36,17 +36,19 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Hatha Yoga",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-01.jpg",
-    description: "O Hatha Yoga é a base de todas as práticas de yoga, focando no equilíbrio entre corpo e mente através de posturas físicas (asanas), exercícios de respiração (pranayamas) e meditação.",
-    extendedDesc: "Nossas aulas são estruturadas para desenvolver força, flexibilidade e concentração. É uma prática completa que trabalha a vitalidade do corpo enquanto acalma o sistema nervoso, proporcionando uma sensação duradoura de paz e equilíbrio.",
-    benefits: [
-      "Aumento da flexibilidade e força muscular",
-      "Melhora da postura e do alinhamento corporal",
-      "Redução dos níveis de cortisol e estresse",
-      "Melhora da qualidade do sono",
-      "Aumento da capacidade respiratória",
-      "Desenvolvimento do foco e clareza mental"
+    description: "O Hatha Yoga é uma prática tradicional que integra posturas físicas (ásanas), técnicas respiratórias (pranayamas), mantras, relaxamento e meditação.",
+    extendedDesc: [
+      "Essa combinação promove relaxamento profundo, serenidade e paz interior, equilíbrio entre o sistema físico e mental, auxiliando no fortalecimento muscular, na melhora da mobilidade e na redução de tensões acumuladas no corpo.",
+      "A prática estimula a consciência corporal e o controle respiratório, contribuindo para maior estabilidade emocional e bem-estar geral."
     ],
-    whoIsItFor: "Mulheres de todas as idades que buscam uma prática física equilibrada e momentos de introspecção e calma."
+    benefits: [
+      "Melhora da flexibilidade e mobilidade",
+      "Fortalecimento muscular equilibrado",
+      "Redução do estresse e ansiedade",
+      "Melhora da respiração",
+      "Maior consciência corporal"
+    ],
+    whoIsItFor: "A prática é indicada para todos que buscam bem estar, saúde, paz e serenidade"
   },
   "pilates": {
     category: "Práticas",
@@ -217,7 +219,7 @@ const ServiceDetail = () => {
                 
                 <h2 className="mt-8 text-2xl md:text-[32px] font-serif text-charcoal leading-tight font-semibold max-w-[95%]">
                   {service.title === "Yoga Gestacional" ? "Cuidado, equilíbrio e preparo para o parto" : 
-                   service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente com tradição" :
+                   service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente" :
                    service.title === "Pilates" ? "Fortalecimento e controle com precisão técnica" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
@@ -266,7 +268,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {service.title === "Yoga Gestacional" ? "Benefícios" : "Principais Benefícios"}
+                    {service.title === "Yoga Gestacional" || service.title === "Hatha Yoga" ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -299,9 +301,9 @@ const ServiceDetail = () => {
                   <Info className="h-12 w-12 text-gold" />
                 </div>
                 <div className="w-full">
-                  <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                    {service.title === "Yoga Gestacional" ? "Indicado para" : "Para quem é indicado?"}
-                  </h4>
+                <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
+                  {service.title === "Yoga Gestacional" || service.title === "Hatha Yoga" ? "Indicado para" : "Para quem é indicado?"}
+                </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
                       {service.whoIsItFor.map((item: string, i: number) => (
@@ -341,6 +343,8 @@ const ServiceDetail = () => {
                   <MessageCircle className="hidden md:block h-6 w-6 mr-3 shrink-0" />
                   {service.title === "Yoga Gestacional" 
                     ? "Agendar acompanhamento de Yoga Gestacional pelo WhatsApp" 
+                    : service.title === "Hatha Yoga"
+                    ? "Agendar aula de Hatha Yoga pelo WhatsApp"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
