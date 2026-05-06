@@ -108,17 +108,26 @@ const serviceData: Record<string, any> = {
     category: "Tratamentos",
     title: "Kinesio Taping",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-01.png",
-    description: "O Kinesio Taping utiliza bandagens elásticas adesivas para dar suporte muscular, reduzir dores e auxiliar na drenagem linfática sem limitar os movimentos do corpo.",
-    extendedDesc: "As bandagens atuam estimulando mecanicamente os receptores da pele e melhorando a circulação local. É uma técnica excelente para suporte em pós-operatórios, gestantes com dores lombares ou atletas em recuperação.",
-    benefits: [
-      "Redução imediata da percepção de dor",
-      "Suporte para articulações e músculos instáveis",
-      "Auxílio na redução de hematomas e edemas",
-      "Melhora da propriocepção (consciência do movimento)",
-      "Pode ser usado por vários dias consecutivos",
-      "Livre de medicamentos"
+    description: "O Kinesio Taping é uma técnica de bandagem elástica aplicada com objetivo terapêutico, promovendo estímulo sensorial contínuo na pele e nos tecidos subjacentes.",
+    extendedDesc: [
+      "A técnica auxilia na melhora da circulação sanguínea e linfática, estabilização muscular, redução de dor e modulação de processos inflamatórios.",
+      "Pode ser aplicado tanto para facilitar quanto para inibir a contração muscular, conforme necessidade clínica."
     ],
-    whoIsItFor: "Indicado para alívio de dores musculares, suporte postural e auxílio em processos inflamatórios ou de recuperação."
+    benefits: [
+      "Redução de dor",
+      "Diminuição de edemas",
+      "Estabilização articular",
+      "Melhora da função muscular",
+      "Auxílio no processo inflamatório"
+    ],
+    whoIsItFor: [
+      "Gestantes",
+      "Pós-operatório corporal e facial",
+      "Lesões musculares",
+      "Entorses",
+      "Gestantes (suporte abdominal)",
+      "Atletas"
+    ]
   },
   "drenagem-linfatica": {
     category: "Tratamentos",
@@ -227,6 +236,7 @@ const ServiceDetail = () => {
                   {service.title === "Yoga Gestacional" ? "Cuidado, equilíbrio e preparo para o parto" : 
                    service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente" :
                    service.title === "Pilates" ? "Reeducação corporal e estabilização profunda" :
+                   service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
                    service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
@@ -274,7 +284,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {["Yoga Gestacional", "Hatha Yoga", "Pilates"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
+                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -308,7 +318,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="w-full">
                 <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                  {["Yoga Gestacional", "Hatha Yoga", "Pilates"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
+                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
                 </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
@@ -353,6 +363,8 @@ const ServiceDetail = () => {
                     ? "Agendar aula de Hatha Yoga pelo WhatsApp"
                     : service.title === "Pilates"
                     ? "Agendar avaliação de Pilates"
+                    : service.title === "Kinesio Taping"
+                    ? "Agendar aplicação de Kinesio Taping"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
