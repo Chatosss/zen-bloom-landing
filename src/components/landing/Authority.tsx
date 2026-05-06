@@ -10,12 +10,12 @@ const items = [
   {
     icon: HeartPulse,
     title: "Especialização em reabilitação",
-    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida.",
+    text: "Fisioterapia focada na recuperação funcional e bem-estar em todas as fases da vida",
   },
   {
     icon: Brain,
     title: "Abordagem integrada entre corpo e mente",
-    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo.",
+    text: "Equilíbrio completo unindo técnicas físicas ao relaxamento mental profundo",
   },
   {
     icon: ShieldCheck,
@@ -25,7 +25,7 @@ const items = [
   {
     icon: Users,
     title: "Exclusivo para mulheres",
-    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino.",
+    text: "Ambiente pensado para oferecer total privacidade e conforto ao público feminino",
   },
 ];
 
@@ -40,10 +40,9 @@ const Authority = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Diferenciais</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">DIFERENCIAIS</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-            Muito mais que movimento.
-            <span className="block italic text-sage-deep">Uma reabilitação completa.</span>
+            Muito mais que movimento. <span className="block italic text-sage-deep">Uma reabilitação completa.</span>
           </h2>
         </motion.div>
 

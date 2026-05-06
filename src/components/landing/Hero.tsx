@@ -60,7 +60,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            Saúde & Bem-estar Feminino
+            SAÚDE E BEM ESTAR FEMININO
           </motion.span>
 
           <h1 className="mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
@@ -86,11 +86,11 @@ const Hero = () => {
           </motion.div>
 
           <p className="mt-6 text-base sm:text-lg text-charcoal/75 leading-relaxed">
-            O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase da vida.
+            O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase de vida.
           </p>
 
           <p className="mt-4 text-base text-charcoal/60 leading-relaxed italic">
-            Almeja, em especial para a estética da mulher, o trato profissional em drenagem linfática e o tratamento pré e pós-operatório de procedimento estético ou gestacional, com opções de práticas de Yoga e Pilates, sempre em busca do equilíbrio entre saúde-beleza-e bem estar.
+            Além de espaço para a estética da mulher, o trato foca em drenagem linfática e o tratamento pré e pós-operatório (de procedimentos estéticos ou gestacional) com opções de práticas de yoga e Pilates, sempre em busca do equilíbrio entre saúde e bem estar.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">

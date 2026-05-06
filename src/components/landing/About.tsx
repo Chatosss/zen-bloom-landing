@@ -3,9 +3,9 @@ import { BadgeCheck, GraduationCap, MessageCircle, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const credentials = [
-  { icon: BadgeCheck, label: "CREFITO 2 — Fisioterapeuta registrada" },
+  { icon: BadgeCheck, label: "CREFITO 2 - Fisioterapeuta registrada" },
   { icon: GraduationCap, label: "Especialista em Saúde da Mulher" },
-  { icon: Globe2, label: "Mestrado em Yoga — Índia" },
+  { icon: Globe2, label: "Mestrado em Yoga - Índia" },
 ];
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
     <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-center">
         <div className="lg:hidden">
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Quem cuidará de você</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">QUEM CUIDARÁ DE VOCÊ</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-charcoal leading-tight">
             Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
           </h2>
@@ -52,16 +52,13 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
         >
           <div className="hidden lg:block">
-            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Quem cuidará de você</span>
+            <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">QUEM CUIDARÁ DE VOCÊ</span>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
               Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
             </h2>
           </div>
           <p className="mt-6 text-charcoal/75 leading-relaxed text-lg">
-            Fisioterapeuta especialista na saúde da mulher. Minha missão é guiar você em uma jornada de autocuidado com segurança técnica e acolhimento.
-          </p>
-          <p className="mt-4 text-charcoal/75 leading-relaxed">
-            Trago na bagagem especializações em reabilitação e um Mestrado em Yoga realizado na Índia, garantindo um olhar completo sobre suas necessidades — do corpo à mente.
+            Fisioterapeuta especialista na saúde da mulher. Minha missão é guiar você em uma jornada de autocuidado com segurança técnica e acolhimento. Trago na bagagem especializações em reabilitação e um Mestrado em Yoga realizado na Índia, garantindo um olhar completo sobre suas necessidades - do corpo à mente.
           </p>
 
           <ul className="mt-8 space-y-3">
