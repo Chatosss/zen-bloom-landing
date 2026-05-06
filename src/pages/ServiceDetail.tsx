@@ -92,17 +92,16 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Yoga Terapêutico",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg",
-    description: "O Yoga Terapêutico aplica as ferramentas do yoga de forma individualizada para auxiliar no tratamento de condições específicas de saúde, dores crônicas ou recuperação funcional.",
-    extendedDesc: "Cada sessão é adaptada às limitações e necessidades da aluna. Utilizamos acessórios (props) para garantir conforto e segurança, focando na reabilitação gentil e no reequilíbrio dos sistemas do corpo.",
+    description: "O Yoga Terapêutico é uma adaptação do Yoga clássico com base científica e foco na reabilitação do corpo moderno.",
+    extendedDesc: "A prática integra posturas com princípios da fisioterapia e reorganização biomecânica, auxiliando na mobilidade, na reorganização postural e na melhora da funcionalidade do corpo.",
     benefits: [
-      "Alívio de dores crônicas (fibromialgia, artrite, etc.)",
-      "Auxílio na recuperação de lesões ortopédicas",
-      "Gestão de sintomas de ansiedade e depressão",
-      "Melhora do funcionamento do sistema digestivo e hormonal",
-      "Aumento da vitalidade em processos de recuperação",
-      "Prática 100% segura e adaptada"
+      "Alívio de dores crônicas",
+      "Melhora da mobilidade articular",
+      "Reorganização postural",
+      "Fortalecimento muscular funcional",
+      "Equilíbrio físico e mental"
     ],
-    whoIsItFor: "Mulheres com necessidades específicas de saúde, dores crônicas ou que preferem uma abordagem mais cuidadosa e terapêutica."
+    whoIsItFor: "Para todas as pessoas em qualquer idade e fase da vida, respeitando as suas particularidades e suas patologias."
   },
   "kinesio-taping": {
     category: "Tratamentos",
@@ -237,6 +236,7 @@ const ServiceDetail = () => {
                    service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente" :
                    service.title === "Pilates" ? "Reeducação corporal e estabilização profunda" :
                    service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
+                   service.title === "Yoga Terapêutico" ? "Abordagem funcional e reabilitadora" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
                    service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
@@ -284,7 +284,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
+                    {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -318,7 +318,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="w-full">
                 <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
+                  {["Yoga Gestacional", "Hatha Yoga", "Pilates", "Kinesio Taping", "Yoga Terapêutico"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
                 </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
@@ -365,6 +365,8 @@ const ServiceDetail = () => {
                     ? "Agendar avaliação de Pilates"
                     : service.title === "Kinesio Taping"
                     ? "Agendar aplicação de Kinesio Taping"
+                    : service.title === "Yoga Terapêutico"
+                    ? "Agendar sessão de Yoga Terapêutico"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
