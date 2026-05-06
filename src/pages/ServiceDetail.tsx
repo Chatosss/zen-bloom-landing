@@ -54,17 +54,23 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Pilates",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-01.jpg",
-    description: "O Pilates é um método de controle muscular que foca no fortalecimento do 'powerhouse' (centro do corpo), melhora da postura e reabilitação física com precisão técnica.",
-    extendedDesc: "As sessões são conduzidas com foco na qualidade do movimento, respiração e controle. Ideal tanto para condicionamento físico quanto para recuperação de lesões, o Pilates promove um corpo firme, flexível e funcional.",
+    description: "O método Pilates atua na ativação da musculatura profunda estabilizadora, especialmente do core (transverso abdominal, multífidos, assoalho pélvico e diafragma), promovendo equilíbrio muscular, e alinhamento postural.",
+    extendedDesc: "O trabalho é realizado com controle respiratório, foco na qualidade do movimento e progressão individualizada, sendo indicado tanto para reabilitação quanto para condicionamento físico.",
     benefits: [
-      "Fortalecimento profundo da musculatura abdominal e dorsal",
-      "Correção postural e alívio de dores na coluna",
-      "Melhora da coordenação motora e equilíbrio",
-      "Aumento da densidade óssea e mobilidade articular",
-      "Prevenção de lesões musculares",
-      "Tonificação muscular sem impacto agressivo"
+      "Estabilização da coluna vertebral",
+      "Fortalecimento do core",
+      "Reequilíbrio muscular",
+      "Melhora da flexibilidade",
+      "Redução de lombalgias"
     ],
-    whoIsItFor: "Mulheres que buscam fortalecer o corpo, melhorar a postura ou que necessitam de reabilitação física assistida."
+    whoIsItFor: [
+      "Hérnia de disco",
+      "Desvios posturais",
+      "Pós-operatório",
+      "Gestantes",
+      "Atletas",
+      "Pessoas com dores crônicas"
+    ]
   },
   "yin-yoga": {
     category: "Práticas",
@@ -220,7 +226,7 @@ const ServiceDetail = () => {
                 <h2 className="mt-8 text-2xl md:text-[32px] font-serif text-charcoal leading-tight font-semibold max-w-[95%]">
                   {service.title === "Yoga Gestacional" ? "Cuidado, equilíbrio e preparo para o parto" : 
                    service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente" :
-                   service.title === "Pilates" ? "Fortalecimento e controle com precisão técnica" :
+                   service.title === "Pilates" ? "Reeducação corporal e estabilização profunda" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
                    service.title === "Yoga Terapêutico" ? "Reabilitação gentil através das ferramentas do yoga" :
                    service.title === "Kinesio Taping" ? "Suporte muscular funcional para alívio imediato" :
@@ -268,7 +274,7 @@ const ServiceDetail = () => {
               >
                 <div className="mb-4 relative inline-block">
                   <h3 className="text-2xl font-serif text-white">
-                    {service.title === "Yoga Gestacional" || service.title === "Hatha Yoga" ? "Benefícios" : "Principais Benefícios"}
+                    {["Yoga Gestacional", "Hatha Yoga", "Pilates"].includes(service.title) ? "Benefícios" : "Principais Benefícios"}
                   </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
                 </div>
@@ -302,7 +308,7 @@ const ServiceDetail = () => {
                 </div>
                 <div className="w-full">
                 <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
-                  {service.title === "Yoga Gestacional" || service.title === "Hatha Yoga" ? "Indicado para" : "Para quem é indicado?"}
+                  {["Yoga Gestacional", "Hatha Yoga", "Pilates"].includes(service.title) ? "Indicado para" : "Para quem é indicado?"}
                 </h4>
                   {Array.isArray(service.whoIsItFor) ? (
                     <ul className="space-y-3">
@@ -345,6 +351,8 @@ const ServiceDetail = () => {
                     ? "Agendar acompanhamento de Yoga Gestacional pelo WhatsApp" 
                     : service.title === "Hatha Yoga"
                     ? "Agendar aula de Hatha Yoga pelo WhatsApp"
+                    : service.title === "Pilates"
+                    ? "Agendar avaliação de Pilates"
                     : "Quero agendar meu atendimento"}
                 </Button>
               </a>
