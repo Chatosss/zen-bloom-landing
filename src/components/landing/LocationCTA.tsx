@@ -13,21 +13,21 @@ const LocationCTA = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Localização</span>
-           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
-             Um refúgio em <span className="italic text-sage-deep">Balneário Camboriú</span>
-           </h2>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">LOCALIZAÇÃO</span>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight">
+            Um refúgio em Balneário Camboriú
+          </h2>
           <p className="mt-5 text-charcoal/70 leading-relaxed max-w-md">
             Atendimento individual e em pequenos grupos. Agende sua visita e conheça nosso espaço pensado em cada detalhe.
           </p>
            <ul className="mt-8 space-y-4">
-             <li className="flex items-start gap-3">
-               <MapPin className="h-5 w-5 text-gold mt-0.5" />
-               <span className="text-charcoal/85">Edifício La Belle Rua 2000, nº 121 – Sala 10 CEP 88330-414</span>
-             </li>
-             <li className="flex items-start gap-3">
+            <li className="flex items-start gap-3">
+              <MapPin className="h-5 w-5 text-gold mt-0.5" />
+              <span className="text-charcoal/85">Edifício La Belle - Rua 2000 nº 121 - Sala 10 - CEP 88330-414</span>
+            </li>
+            <li className="flex items-start gap-3">
               <Clock className="h-5 w-5 text-gold mt-0.5" />
-              <span className="text-charcoal/85">Seg a Sex · 7h às 20h &nbsp;·&nbsp; Sáb · 8h às 13h</span>
+              <span className="text-charcoal/85">Seg a Sex - 7h às 20h | Sáb - 8h às 13h</span>
             </li>
             <li className="flex items-start gap-3">
               <Phone className="h-5 w-5 text-gold mt-0.5" />
@@ -65,11 +65,10 @@ const LocationCTA = () => {
           className="relative container mx-auto py-24 lg:py-32 text-center"
         >
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-sage-foreground leading-[1.1] max-w-3xl mx-auto">
-            Seu corpo merece cuidado.
-            <span className="block italic mt-2">Sua mente merece paz.</span>
+            Seu corpo merece cuidado. <span className="block italic mt-2">Sua mente merece paz.</span>
           </h2>
           <p className="mt-6 text-sage-foreground/85 max-w-xl mx-auto">
-            Comece agora uma jornada de bem-estar com acompanhamento personalizado.
+            Comece agora sua jornada de bem-estar com acompanhamento personalizado.
           </p>
           <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
             <Button
