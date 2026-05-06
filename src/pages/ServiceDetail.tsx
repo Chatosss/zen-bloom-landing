@@ -11,17 +11,26 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Yoga Gestacional",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Gestacional-01.jpg",
-    description: "O Yoga Gestacional é uma prática suave e adaptada para acolher as transformações do corpo feminino durante a gravidez. Através de posturas específicas, técnicas de respiração e relaxamento, buscamos preparar a gestante física e emocionalmente para o parto e para a chegada do bebê.",
-    extendedDesc: "A prática foca em aliviar desconfortos comuns como dores lombares, inchaço e ansiedade, promovendo uma conexão profunda entre mãe e filho. É um momento de pausa e autocuidado em meio à jornada da maternidade.",
-    benefits: [
-      "Alívio de dores nas costas e tensões musculares",
-      "Melhora da circulação sanguínea e redução de edemas",
-      "Aumento da consciência corporal e flexibilidade",
-      "Técnicas de respiração que auxiliam no trabalho de parto",
-      "Redução do estresse e promoção do equilíbrio emocional",
-      "Fortalecimento do assoalho pélvico"
+    description: "O Yoga Gestacional é uma prática adaptada às mudanças físicas, hormonais e emocionais que acontecem durante a gravidez.",
+    extendedDesc: [
+      "Através de posturas suaves (ásanas), técnicas respiratórias (pranayamas) e momentos de relaxamento, a prática contribui para maior conforto físico e equilíbrio emocional ao longo da gestação.",
+      "Os exercícios são conduzidos de forma segura e respeitando cada fase da gravidez, auxiliando na estabilização da pelve, fortalecimento do assoalho pélvico e melhora da postura, reduzindo sobrecargas na coluna lombar.",
+      "As técnicas respiratórias também contribuem para o controle emocional e para o preparo fisiológico do corpo para o momento do parto."
     ],
-    whoIsItFor: "Gestantes em todas as fases da gravidez (sob liberação médica), que buscam bem-estar e uma gestação mais consciente."
+    benefits: [
+      "Alívio de dores lombares e pélvicas",
+      "Melhora da postura durante a gestação",
+      "Redução de inchaços e melhora da circulação",
+      "Fortalecimento do assoalho pélvico",
+      "Melhora da respiração e do relaxamento",
+      "Preparação física e emocional para o parto"
+    ],
+    whoIsItFor: [
+      "Gestantes em qualquer fase da gravidez (com liberação médica)",
+      "Mulheres que apresentam desconfortos posturais durante a gestação",
+      "Gestantes que desejam preparar o corpo para o parto",
+      "Quem busca viver a gestação com mais equilíbrio e bem-estar"
+    ]
   },
   "hatha-yoga": {
     category: "Práticas",
@@ -206,8 +215,8 @@ const ServiceDetail = () => {
                   <span className="text-gold font-semibold tracking-[0.2em] uppercase text-xs">Sobre a {service.category === "Tratamentos" ? "Técnica" : "Prática"}</span>
                 </div>
                 
-                <h2 className="mt-8 text-2xl md:text-[32px] font-serif text-charcoal leading-tight font-semibold max-w-[90%]">
-                  {service.title === "Yoga Gestacional" ? "Uma prática suave para cada fase da gestação" : 
+                <h2 className="mt-8 text-2xl md:text-[32px] font-serif text-charcoal leading-tight font-semibold max-w-[95%]">
+                  {service.title === "Yoga Gestacional" ? "Cuidado, equilíbrio e preparo para o parto" : 
                    service.title === "Hatha Yoga" ? "Equilíbrio entre corpo e mente com tradição" :
                    service.title === "Pilates" ? "Fortalecimento e controle com precisão técnica" :
                    service.title === "Yin Yoga" ? "Quietude profunda e liberação miofascial" :
@@ -217,15 +226,27 @@ const ServiceDetail = () => {
                    "Abordagem terapêutica para estética e saúde"}
                 </h2>
                 
-                <p className="mt-6 text-charcoal/80 font-serif text-lg md:text-xl leading-[1.7] font-normal">
-                  {service.description}
-                </p>
+                <div className="mt-6 space-y-6">
+                  <p className="text-charcoal/80 font-serif text-lg md:text-xl leading-[1.7] font-normal">
+                    {service.description}
+                  </p>
 
-                <div className="my-8 w-20 h-px bg-gold/30" />
-                
-                <p className="text-charcoal/60 leading-relaxed text-base md:text-lg">
-                  {service.extendedDesc}
-                </p>
+                  <div className="my-4 w-20 h-px bg-gold/30" />
+                  
+                  {Array.isArray(service.extendedDesc) ? (
+                    <div className="space-y-4">
+                      {service.extendedDesc.map((p: string, i: number) => (
+                        <p key={i} className="text-charcoal/60 leading-relaxed text-base md:text-lg">
+                          {p}
+                        </p>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-charcoal/60 leading-relaxed text-base md:text-lg">
+                      {service.extendedDesc}
+                    </p>
+                  )}
+                </div>
                 
                 <div className="mt-16">
                   <Link to="/" className="group inline-flex items-center gap-2 text-gold transition-colors font-semibold uppercase tracking-wider text-sm">
@@ -243,10 +264,12 @@ const ServiceDetail = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-charcoal p-10 rounded-3xl shadow-2xl border-t-4 border-gold lg:sticky lg:top-32"
               >
-                <h3 className="text-2xl font-serif text-white mb-4 relative inline-block">
-                  Principais Benefícios
+                <div className="mb-4 relative inline-block">
+                  <h3 className="text-2xl font-serif text-white">
+                    {service.title === "Yoga Gestacional" ? "Benefícios" : "Principais Benefícios"}
+                  </h3>
                   <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gold/50" />
-                </h3>
+                </div>
                 <ul className="mt-10 space-y-4">
                   {service.benefits.map((benefit: string, index: number) => (
                     <li key={index} className="flex items-start gap-4">
@@ -271,12 +294,27 @@ const ServiceDetail = () => {
               viewport={{ once: true }}
               className="bg-white p-10 md:p-16 rounded-[3rem] shadow-soft flex flex-col md:flex-row items-center gap-8 md:gap-12"
             >
-              <div className="bg-gold/10 p-6 rounded-full">
-                <Info className="h-12 w-12 text-gold" />
-              </div>
-              <div>
-                <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-4">Para quem é indicado?</h4>
-                <p className="text-charcoal/70 text-xl leading-relaxed">{service.whoIsItFor}</p>
+              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 w-full">
+                <div className="bg-gold/10 p-6 rounded-full shrink-0">
+                  <Info className="h-12 w-12 text-gold" />
+                </div>
+                <div className="w-full">
+                  <h4 className="text-2xl md:text-3xl font-serif text-charcoal mb-6">
+                    {service.title === "Yoga Gestacional" ? "Indicado para" : "Para quem é indicado?"}
+                  </h4>
+                  {Array.isArray(service.whoIsItFor) ? (
+                    <ul className="space-y-3">
+                      {service.whoIsItFor.map((item: string, i: number) => (
+                        <li key={i} className="flex items-start gap-3 text-charcoal/70 text-lg md:text-xl leading-relaxed">
+                          <span className="text-gold mt-2 block w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-charcoal/70 text-xl leading-relaxed">{service.whoIsItFor}</p>
+                  )}
+                </div>
               </div>
             </motion.div>
           </div>
@@ -296,12 +334,14 @@ const ServiceDetail = () => {
               <h2 className="text-4xl md:text-5xl font-serif text-white mb-6 leading-tight">Pronta para começar sua jornada de bem-estar?</h2>
               <p className="text-cream/70 mb-12 text-xl max-w-xl mx-auto">Sinta a transformação em seu corpo e mente com um atendimento exclusivo.</p>
               <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
-                <Button 
-                  size="lg" 
-                  className="gradient-gold text-gold-foreground rounded-full px-12 h-18 text-xl shadow-2xl hover:brightness-90 transition-all font-semibold"
+                <Button
+                  size="lg"
+                  className="gradient-gold text-gold-foreground rounded-full px-12 py-8 h-auto text-xl shadow-2xl hover:brightness-90 transition-all font-semibold whitespace-normal max-w-full"
                 >
-                  <MessageCircle className="h-6 w-6 mr-3" />
-                  Quero agendar meu atendimento
+                  <MessageCircle className="h-6 w-6 mr-3 shrink-0" />
+                  {service.title === "Yoga Gestacional" 
+                    ? "Agendar acompanhamento de Yoga Gestacional pelo WhatsApp" 
+                    : "Quero agendar meu atendimento"}
                 </Button>
               </a>
             </motion.div>
