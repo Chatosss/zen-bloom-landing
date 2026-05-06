@@ -13,9 +13,9 @@ const About = () => {
     <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-center">
         <div className="lg:hidden">
-          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">QUEM CUIDARÁ DE VOCÊ</span>
+          <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-charcoal leading-tight">
-            Prazer, sou <span className="italic text-gold">Simone Santos Parolin</span>.
+            Simone Santos Parolin
           </h2>
         </div>
 
