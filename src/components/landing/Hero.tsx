@@ -11,14 +11,37 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  const [interactionNeeded, setInteractionNeeded] = useState(false);
+
   useEffect(() => {
     const v = videoRef.current;
     if (v) {
-      v.muted = true;
+      v.muted = false;
       v.play().catch(error => {
-        console.log("Autoplay failed:", error);
+        console.log("Autoplay with audio failed, falling back to muted autoplay:", error);
+        v.muted = true;
+        v.play().then(() => {
+          setInteractionNeeded(true);
+        });
       });
     }
+
+    const handleFirstInteraction = () => {
+      if (v && v.muted) {
+        v.muted = false;
+        setInteractionNeeded(false);
+      }
+    };
+
+    window.addEventListener('click', handleFirstInteraction, { once: true });
+    window.addEventListener('touchstart', handleFirstInteraction, { once: true });
+    window.addEventListener('scroll', handleFirstInteraction, { once: true });
+
+    return () => {
+      window.removeEventListener('click', handleFirstInteraction);
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('scroll', handleFirstInteraction);
+    };
   }, []);
 
   const togglePlay = () => {
@@ -114,12 +137,17 @@ const Hero = () => {
                 loop
                 playsInline
                 preload="auto"
-                onPlay={() => setIsPlaying(true)}
+              onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
-              autoPlay
-              muted
               className="h-full w-full object-cover"
             />
+            {interactionNeeded && (
+              <div className="absolute top-4 right-4 z-20">
+                <div className="bg-black/40 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-[10px] uppercase tracking-wider font-medium animate-bounce">
+                  Toque para ativar o som 🔊
+                </div>
+              </div>
+            )}
             </div>
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
