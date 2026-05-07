@@ -16,9 +16,8 @@ const Hero = () => {
     if (v) {
       v.muted = false;
       v.play().catch(error => {
-        console.log("Autoplay with audio failed, falling back to muted autoplay:", error);
-        v.muted = true;
-        v.play();
+        console.log("Autoplay with audio was blocked by browser:", error);
+        setIsPlaying(false);
       });
     }
   }, []);
@@ -105,7 +104,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="relative mt-8 lg:mt-0 hidden lg:block"
+          className="relative mt-8 lg:mt-0"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
             <div className="h-full w-full">
