@@ -64,30 +64,18 @@ const Hero = () => {
           </motion.span>
 
           <h1 className="mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
-            Cada respiração é uma chance de se reconectar
+            Cada respiração é uma chance de se reconectar.
           </h1>
           
-          {/* Video for Mobile - Hidden on Large screens */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="lg:hidden mt-8 relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
-          >
-            <video
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              autoPlay
-              playsInline
-              muted
-              className="h-full w-full object-cover"
-            />
-          </motion.div>
-
-          <p className="mt-6 text-base sm:text-lg text-charcoal/75 leading-relaxed">
-            Dores na coluna, tensão muscular ou desconforto no corpo? Aqui no Espaço Lounge Zen você encontra um atendimento individualizado, focado em aliviar dores, melhorar sua mobilidade e trazer mais leveza para o seu dia a dia.
-          </p>
+          <div className="mt-6 space-y-6">
+            <p className="text-base sm:text-lg text-charcoal/75 leading-relaxed">
+              O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase da vida.
+            </p>
+            
+            <p className="text-base sm:text-lg text-charcoal/75 font-medium leading-relaxed italic border-l-2 border-gold/30 pl-4">
+              Almeja, em especial para a estética da mulher, o trato profissional em drenagem linfática e o tratamento pré e pós-operatório de procedimento estético ou gestacional, com opções de práticas de Yoga e Pilates, sempre em busca do equilíbrio entre saúde-beleza-e bem estar.
+            </p>
+          </div>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
