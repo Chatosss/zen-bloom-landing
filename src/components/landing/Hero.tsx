@@ -11,14 +11,32 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const startVideo = () => {
+    const v = videoRef.current;
+    if (v && !hasStarted) {
+      v.muted = false;
+      v.play().catch(error => console.log("Playback failed:", error));
+      setIsPlaying(true);
+      setHasStarted(true);
+    }
+  };
+
   useEffect(() => {
     const v = videoRef.current;
     if (v) {
-      v.play().catch(error => {
-        console.log("Autoplay failed:", error);
-      });
+      v.muted = true;
+      v.play().catch(error => console.log("Autoplay failed:", error));
     }
-  }, []);
+    
+    window.addEventListener('click', startVideo, { once: true });
+    window.addEventListener('touchstart', startVideo, { once: true });
+    return () => {
+      window.removeEventListener('click', startVideo);
+      window.removeEventListener('touchstart', startVideo);
+    };
+  }, [hasStarted]);
 
   const togglePlay = () => {
     const v = videoRef.current;
@@ -105,19 +123,32 @@ const Hero = () => {
           className="relative mt-8 lg:mt-0 hidden lg:block"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
-            <video
-              ref={videoRef}
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              autoPlay
-              playsInline
-              muted
-              preload="auto"
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              className="h-full w-full object-cover"
-            />
+            <div className="h-full w-full">
+              <video
+                ref={videoRef}
+                src={VIDEO_URL}
+                poster={COVER_URL}
+                loop
+                playsInline
+                preload="auto"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                className="h-full w-full object-cover"
+              />
+              {!hasStarted && isPlaying && (
+                <div 
+                  className="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[1px] z-10 cursor-pointer"
+                  onClick={startVideo}
+                >
+                  <div className="flex flex-col items-center gap-4 text-white group/play">
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse group-hover/play:scale-110 transition-transform duration-300">
+                      <Play className="h-8 w-8 ml-1" fill="currentColor" />
+                    </span>
+                    <span className="text-sm font-medium uppercase tracking-widest drop-shadow-md bg-black/20 px-4 py-1 rounded-full">Clique para ouvir</span>
+                  </div>
+                </div>
+              )}
+            </div>
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
             {/* Play / Pause button */}
