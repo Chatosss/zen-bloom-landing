@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const treatments = [
   { 
     slug: "drenagem-linfatica", 
-    title: "Drenagem Linfática", 
+    title: "Drenagem Linfática Pré e Pós-operatório", 
     desc: "Técnica terapêutica que auxilia na redução de edemas, melhora da circulação e recuperação tecidual. Indicado para: Pacientes em pré e pós-operatório, pessoas com retenção de líquidos e inchaços, redução de edemas e relaxamento.", 
     img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" 
   },

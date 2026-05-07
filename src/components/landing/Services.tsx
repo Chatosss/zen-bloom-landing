@@ -8,8 +8,6 @@ const practices = [
   { slug: "pilates", title: "Pilates", desc: "É um Condicionamento físico e mental focado em fortalecimento, postura, flexibilidade e reabilitação, respeitando os limites e as necessidades individuais de cada pessoa.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Pilates-02.jpg" },
   { slug: "vin-yoga", title: "Yin Yoga", desc: "Prática derivada do Hatha Yoga, com abordagem mais contemplativa e profunda. Os movimentos são realizados com posturas suaves e permanências mais longas, estimulando o relaxamento muscular e a liberação de tensões acumuladas.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-21-at-11.29.14.jpeg" },
   { slug: "yoga-terapeutico", title: "Yoga Terapêutico", desc: "Prática adaptada do Yoga clássico com base científica e foco terapêutico, desenvolvida para atender as necessidades do corpo moderno.", img: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg" },
-  { slug: "kinesio-taping", title: "Kinesio Taping", desc: "Bandagem terapêutica que auxilia na estabilização muscular, redução de dores e melhora da circulação.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-02.jpeg" },
-  { slug: "drenagem-linfatica", title: "Drenagem Linfática Pré e Pós-operatório", desc: "Técnica terapêutica que auxilia na redução de edemas, melhora da circulação e recuperação tecidual. Indicado para: Pacientes em pré e pós-operatório, pessoas com retenção de líquidos e inchaços, redução de edemas e relaxamento.", img: "https://leonardopages.com/wp-content/uploads/2026/05/Linfatica-01.jpg" },
 ];
 
 const Services = () => {
