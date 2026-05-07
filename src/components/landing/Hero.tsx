@@ -24,6 +24,12 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    const v = videoRef.current;
+    if (v) {
+      v.muted = true;
+      v.play().catch(error => console.log("Autoplay failed:", error));
+    }
+    
     window.addEventListener('click', startVideo, { once: true });
     window.addEventListener('touchstart', startVideo, { once: true });
     return () => {
