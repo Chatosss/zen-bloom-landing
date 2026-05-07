@@ -117,17 +117,32 @@ const Hero = () => {
           className="relative mt-8 lg:mt-0 hidden lg:block"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
-            <video
-              ref={videoRef}
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              playsInline
-              preload="auto"
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              className="h-full w-full object-cover"
-            />
+            <div className="h-full w-full">
+              <video
+                ref={videoRef}
+                src={VIDEO_URL}
+                poster={COVER_URL}
+                loop
+                playsInline
+                preload="auto"
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                className="h-full w-full object-cover"
+              />
+              {!hasStarted && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px] z-10">
+                  <button 
+                    onClick={startVideo}
+                    className="flex flex-col items-center gap-4 text-white group/play"
+                  >
+                    <span className="flex h-20 w-20 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse group-hover/play:scale-110 transition-transform duration-300">
+                      <Play className="h-8 w-8 ml-1" fill="currentColor" />
+                    </span>
+                    <span className="text-sm font-medium uppercase tracking-widest drop-shadow-md">Ativar Áudio</span>
+                  </button>
+                </div>
+              )}
+            </div>
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
             {/* Play / Pause button */}
