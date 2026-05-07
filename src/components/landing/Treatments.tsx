@@ -68,20 +68,20 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
     </div>
-    <div className="p-6 flex flex-col h-full">
-      <h3 className="font-serif text-xl text-charcoal">{s.title}</h3>
-      <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">{s.desc}</p>
-      
-      <div className="mt-auto pt-5 flex">
-        <Link 
-          to={`/${s.slug}`}
-          className="inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn"
-        >
-          Entender tratamento
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
-        </Link>
+      <div className="p-6 flex flex-col flex-1">
+        <h3 className="font-serif text-xl text-charcoal">{s.title}</h3>
+        <p className="mt-2 mb-6 text-sm text-charcoal/70 leading-relaxed">{s.desc}</p>
+        
+        <div className="mt-auto flex">
+          <Link 
+            to={`/${s.slug}`}
+            className="inline-flex items-center gap-2 text-sm font-medium text-gold hover:gap-3 transition-all duration-300 group/btn"
+          >
+            Entender tratamento
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
+          </Link>
+        </div>
       </div>
-    </div>
   </motion.article>
 );
 
