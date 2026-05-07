@@ -11,8 +11,6 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  const [hasStarted, setHasStarted] = useState(false);
-
   useEffect(() => {
     const v = videoRef.current;
     if (v) {
