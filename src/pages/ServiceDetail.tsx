@@ -251,10 +251,7 @@ const ServiceDetail = () => {
                    service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
                    service.title === "Yoga Terapêutico" ? "Abordagem funcional e reabilitadora" :
                    service.title === "Yin Yoga" ? "Relaxamento profundo e liberação de tensões" :
-                    service.title === "Drenagem Linfática" || service.title === "Drenagem Linfática Pré e Pós-operatório" ? "Estímulo circulatório e recuperação tecidual" :
-                    service.title === "Yin Yoga" ? "Relaxamento profundo e liberação de tensões" :
-                    service.title === "Yoga Terapêutico" ? "Abordagem funcional e reabilitadora" :
-                    service.title === "Kinesio Taping" ? "Suporte neuromuscular funcional" :
+                   service.title === "Drenagem Linfática" || service.title === "Drenagem Linfática Pré e Pós-operatório" ? "Estímulo circulatório e recuperação tecidual" :
                    "Abordagem terapêutica para estética e saúde"}
                 </h2>
                 
