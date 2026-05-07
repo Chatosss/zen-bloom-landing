@@ -11,38 +11,14 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  const [interactionNeeded, setInteractionNeeded] = useState(false);
-
   useEffect(() => {
     const v = videoRef.current;
     if (v) {
-      v.muted = false;
+      v.muted = true;
       v.play().catch(error => {
-        console.log("Autoplay with audio was blocked by browser, waiting for interaction:", error);
-        setIsPlaying(false);
-        setInteractionNeeded(true);
+        console.log("Autoplay failed:", error);
       });
     }
-
-    const handleInteraction = () => {
-      if (v && v.paused) {
-        v.muted = false;
-        v.play().then(() => {
-          setIsPlaying(true);
-          setInteractionNeeded(false);
-        }).catch(e => console.log("Play failed after interaction:", e));
-      }
-    };
-
-    window.addEventListener('click', handleInteraction, { once: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true });
-    window.addEventListener('scroll', handleInteraction, { once: true });
-
-    return () => {
-      window.removeEventListener('click', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-      window.removeEventListener('scroll', handleInteraction);
-    };
   }, []);
 
   const togglePlay = () => {
@@ -140,18 +116,10 @@ const Hero = () => {
                 preload="auto"
                 onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
+              autoPlay
+              muted
               className="h-full w-full object-cover"
             />
-            {interactionNeeded && !isPlaying && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/10 backdrop-blur-[2px] z-20 pointer-events-none">
-                <div className="flex flex-col items-center gap-4 text-white">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse">
-                    <Play className="h-6 w-6 ml-1" fill="currentColor" />
-                  </span>
-                  <span className="text-sm font-medium uppercase tracking-widest drop-shadow-md bg-black/30 px-4 py-1.5 rounded-full">Clique para iniciar com som</span>
-                </div>
-              </div>
-            )}
             </div>
             <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`} />
 
