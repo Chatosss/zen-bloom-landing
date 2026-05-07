@@ -129,17 +129,17 @@ const Hero = () => {
                 onPause={() => setIsPlaying(false)}
                 className="h-full w-full object-cover"
               />
-              {!hasStarted && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px] z-10">
-                  <button 
-                    onClick={startVideo}
-                    className="flex flex-col items-center gap-4 text-white group/play"
-                  >
+              {!hasStarted && isPlaying && (
+                <div 
+                  className="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[1px] z-10 cursor-pointer"
+                  onClick={startVideo}
+                >
+                  <div className="flex flex-col items-center gap-4 text-white group/play">
                     <span className="flex h-20 w-20 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse group-hover/play:scale-110 transition-transform duration-300">
                       <Play className="h-8 w-8 ml-1" fill="currentColor" />
                     </span>
-                    <span className="text-sm font-medium uppercase tracking-widest drop-shadow-md">Ativar Áudio</span>
-                  </button>
+                    <span className="text-sm font-medium uppercase tracking-widest drop-shadow-md bg-black/20 px-4 py-1 rounded-full">Clique para ouvir</span>
+                  </div>
                 </div>
               )}
             </div>
