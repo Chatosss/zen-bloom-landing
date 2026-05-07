@@ -16,9 +16,8 @@ const Hero = () => {
     if (v) {
       v.muted = false;
       v.play().catch(error => {
-        console.log("Autoplay with audio failed, falling back to muted autoplay:", error);
-        v.muted = true;
-        v.play();
+        console.log("Autoplay with audio was blocked by browser:", error);
+        setIsPlaying(false);
       });
     }
   }, []);
