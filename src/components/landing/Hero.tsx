@@ -11,14 +11,26 @@ const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  useEffect(() => {
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const startVideo = () => {
     const v = videoRef.current;
-    if (v) {
-      v.play().catch(error => {
-        console.log("Autoplay failed:", error);
-      });
+    if (v && !hasStarted) {
+      v.muted = false;
+      v.play().catch(error => console.log("Playback failed:", error));
+      setIsPlaying(true);
+      setHasStarted(true);
     }
-  }, []);
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', startVideo, { once: true });
+    window.addEventListener('touchstart', startVideo, { once: true });
+    return () => {
+      window.removeEventListener('click', startVideo);
+      window.removeEventListener('touchstart', startVideo);
+    };
+  }, [hasStarted]);
 
   const togglePlay = () => {
     const v = videoRef.current;
