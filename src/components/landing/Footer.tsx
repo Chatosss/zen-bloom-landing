@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="bg-charcoal text-cream/80">
       <div className="container mx-auto py-14 grid md:grid-cols-3 gap-10">
         <div>
-          <img src={logo} alt="Espaço Lounge Zen" className="h-16 w-auto brightness-0 invert opacity-90" />
+          <img src={logo} alt="Espaço Lounge Zen" className="h-16 w-auto opacity-100" />
            <p className="mt-4 text-sm leading-relaxed text-cream/60 max-w-xs">
              Saúde, equilíbrio e bem-estar para mulheres em Balneário Camboriú.
            </p>
