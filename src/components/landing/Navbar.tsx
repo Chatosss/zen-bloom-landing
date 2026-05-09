@@ -31,7 +31,7 @@ const Navbar = ({ isDetail = false }: { isDetail?: boolean }) => {
             </Link>
           )}
           <Link to="/" className="flex items-center gap-3" aria-label="Espaço Lounge Zen — Início">
-            <img src={logo} alt="Espaço Lounge Zen" className="h-12 w-auto md:h-14" />
+            <img src={logo} alt="Espaço Lounge Zen" className="h-16 w-auto md:h-14" />
           </Link>
         </div>
         <nav className="hidden lg:flex items-center gap-8">
