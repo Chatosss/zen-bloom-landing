@@ -70,7 +70,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
-      <div className="container mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center py-16">
+      <div className="container mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center py-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
