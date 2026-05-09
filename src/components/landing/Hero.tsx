@@ -52,13 +52,13 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
-          className="max-w-xl"
+          className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
         >
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
+            className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold mx-auto lg:mx-0"
           >
             <Sparkles className="h-3.5 w-3.5" />
             Atendimento personalizado na saúde da mulher!
@@ -83,7 +83,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent pointer-events-none" />
           </motion.div>
 
-          <h1 className="mt-8 lg:mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
+          <h1 className="mt-8 lg:mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words text-center lg:text-left">
             Cada respiração é uma chance de se reconectar.
           </h1>
           
