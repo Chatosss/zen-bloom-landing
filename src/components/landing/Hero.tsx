@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
-      <div className="container mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center py-16">
+      <div className="container mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center py-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,26 @@ const Hero = () => {
             Atendimento personalizado na saúde da mulher!
           </motion.span>
 
-          <h1 className="mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
+          {/* Video on Mobile - Positioned between badge and title */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.7 }}
+            className="lg:hidden relative mt-8 rounded-2xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
+          >
+            <video
+              src={VIDEO_URL}
+              poster={COVER_URL}
+              loop
+              playsInline
+              autoPlay
+              muted
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent pointer-events-none" />
+          </motion.div>
+
+          <h1 className="mt-8 lg:mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
             Cada respiração é uma chance de se reconectar.
           </h1>
           
@@ -98,12 +117,12 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Video with overlapping trust badge - Hidden on Mobile */}
+        {/* Video with overlapping trust badge - Visible only on Desktop */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="relative mt-8 lg:mt-0"
+          className="hidden lg:block relative mt-8 lg:mt-0"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full ml-auto group">
             <div className="h-full w-full">
