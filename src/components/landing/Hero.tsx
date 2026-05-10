@@ -9,27 +9,48 @@ const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.web
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMobilePlaying, setIsMobilePlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (v) {
-      v.muted = true;
-      v.play().catch(error => {
-        console.log("Autoplay failed:", error);
-      });
-    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (!entry.isIntersecting && !video.paused) {
+            video.pause();
+            if (video === videoRef.current) setIsPlaying(false);
+            if (video === mobileVideoRef.current) setIsMobilePlaying(false);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (videoRef.current) observer.observe(videoRef.current);
+    if (mobileVideoRef.current) observer.observe(mobileVideoRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
-  const togglePlay = () => {
-    const v = videoRef.current;
+  const togglePlay = (isMobile = false) => {
+    const v = isMobile ? mobileVideoRef.current : videoRef.current;
     if (!v) return;
+    
     if (v.paused) {
+      v.muted = false;
+      setIsMuted(false);
       v.play();
-      setIsPlaying(true);
+      if (isMobile) setIsMobilePlaying(true);
+      else setIsPlaying(true);
     } else {
       v.pause();
-      setIsPlaying(false);
+      if (isMobile) setIsMobilePlaying(false);
+      else setIsPlaying(false);
     }
   };
 
@@ -71,16 +92,34 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.7 }}
             className="lg:hidden relative mt-8 rounded-2xl overflow-hidden shadow-elegant border border-border/60 aspect-video w-full group"
           >
-            <video
-              src={VIDEO_URL}
-              poster={COVER_URL}
-              loop
-              playsInline
-              autoPlay
-              muted
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/30 to-transparent pointer-events-none" />
+            <div className="h-full w-full relative">
+              <video
+                ref={mobileVideoRef}
+                src={VIDEO_URL}
+                poster={COVER_URL}
+                loop
+                playsInline
+                className="h-full w-full object-cover"
+                onPlay={() => setIsMobilePlaying(true)}
+                onPause={() => setIsMobilePlaying(false)}
+              />
+              <div className={`absolute inset-0 bg-gradient-to-t from-charcoal/50 via-charcoal/10 to-transparent pointer-events-none transition-opacity duration-500 ${isMobilePlaying ? "opacity-0" : "opacity-100"}`} />
+              
+              <button
+                type="button"
+                onClick={() => togglePlay(true)}
+                aria-label={isMobilePlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isMobilePlaying ? "opacity-0" : "opacity-100"}`}
+              >
+                <span className="flex h-16 w-16 items-center justify-center rounded-full gradient-gold text-gold-foreground shadow-gold animate-soft-pulse">
+                  {isMobilePlaying ? (
+                    <Pause className="h-6 w-6" fill="currentColor" />
+                  ) : (
+                    <Play className="h-6 w-6 ml-1" fill="currentColor" />
+                  )}
+                </span>
+              </button>
+            </div>
           </motion.div>
 
           <h1 className="mt-8 lg:mt-6 font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words text-center lg:text-left">
@@ -133,8 +172,6 @@ const Hero = () => {
                 loop
                 playsInline
                 preload="auto"
-                autoPlay
-                muted
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 className="h-full w-full object-cover"
@@ -145,7 +182,7 @@ const Hero = () => {
             {/* Play / Pause button */}
             <button
               type="button"
-              onClick={togglePlay}
+              onClick={() => togglePlay(false)}
               aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
               className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? "opacity-0 group-hover:opacity-100" : "opacity-100"}`}
             >
