@@ -34,7 +34,7 @@ const About = () => {
             <p className="font-serif text-2xl text-gold leading-none">10+</p>
             <p className="mt-1 text-sm text-charcoal/70">anos cuidando da saúde feminina com excelência</p>
           </div>
-          <div className="absolute -top-6 -left-4 hidden sm:block rounded-full gradient-sage text-sage-foreground px-5 py-2 shadow-soft">
+          <div className="absolute -top-6 -left-4 hidden sm:block rounded-full gradient-gold text-gold-foreground px-5 py-2 shadow-gold">
             <span className="text-xs uppercase tracking-[0.2em]">Simone Santos Parolin</span>
           </div>
         </motion.div>
@@ -75,7 +75,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mt-12 space-y-8">
+          <div className="mt-12 space-y-8 border-l-2 border-gold/10 pl-6">
             <div>
               <h3 className="font-serif text-xl text-charcoal flex items-center gap-2">
                 <GraduationCap className="h-5 w-5 text-gold" />
