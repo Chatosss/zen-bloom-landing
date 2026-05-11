@@ -52,7 +52,7 @@ const LocationCTA = () => {
 
       {/* Final CTA */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 gradient-sage" />
+        <div className="absolute inset-0 bg-charcoal" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--gold)/0.25),transparent_55%)]" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,16 +61,16 @@ const LocationCTA = () => {
           transition={{ duration: 0.8 }}
           className="relative container mx-auto py-24 lg:py-32 text-center"
         >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-sage-foreground leading-[1.1] max-w-3xl mx-auto">
-            Seu corpo merece cuidado. <span className="block italic mt-2">Sua mente merece equilíbrio</span>
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-cream leading-[1.1] max-w-3xl mx-auto">
+            Seu corpo merece cuidado. <span className="block italic mt-2 text-gold">Sua mente merece equilíbrio</span>
           </h2>
-          <p className="mt-6 text-sage-foreground/85 max-w-xl mx-auto">
+          <p className="mt-6 text-cream/85 max-w-xl mx-auto">
             Permita-se viver uma experiência de bem-estar completa em um ambiente acolhedor, seguro e profissional.
           </p>
           <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
             <Button
               size="lg"
-              className="mt-10 bg-cream text-charcoal hover:bg-cream/90 rounded-full px-10 h-14 text-base shadow-elegant hover:scale-[1.04] transition-transform animate-soft-pulse"
+              className="mt-10 gradient-gold text-gold-foreground rounded-full px-10 h-14 text-base shadow-gold hover:scale-[1.04] transition-transform animate-soft-pulse"
             >
               Falar com a profissional agora
               <ArrowRight className="h-5 w-5" />
@@ -81,7 +81,7 @@ const LocationCTA = () => {
                href="https://www.instagram.com/espaco_lounge_zen"
                target="_blank"
                rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 text-sage-foreground/90 hover:text-cream transition-colors"
+               className="inline-flex items-center gap-2 text-cream/70 hover:text-gold transition-colors"
              >
                <Instagram className="h-4 w-4" /> @espaco_lounge_zen
              </a>

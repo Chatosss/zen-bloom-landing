@@ -32,11 +32,14 @@ const Treatments = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto space-y-4"
         >
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight text-center">
             Tratamentos
           </h2>
+          <div className="flex justify-center">
+            <div className="h-1 w-24 gradient-gold rounded-full" />
+          </div>
         </motion.div>
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
