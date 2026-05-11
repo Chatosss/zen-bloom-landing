@@ -19,11 +19,14 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto space-y-4"
         >
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight text-center">
             Nossas Práticas de Bem-Estar
           </h2>
+          <div className="flex justify-center">
+            <div className="h-1 w-24 gradient-gold rounded-full" />
+          </div>
         </motion.div>
 
 
@@ -43,8 +46,13 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.6, delay: (i % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
-    className="group overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft hover:shadow-elegant transition-all duration-500"
+    className="group overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft hover:shadow-elegant transition-all duration-500 relative"
   >
+    <div className="absolute top-4 right-4 z-10">
+      <div className="h-8 w-8 rounded-full gradient-gold flex items-center justify-center shadow-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <Sparkles className="h-4 w-4 text-gold-foreground" />
+      </div>
+    </div>
     <div className="relative aspect-[4/3] overflow-hidden">
       <img
         src={s.img}
@@ -56,8 +64,8 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
     </div>
-    <div className="p-6 flex flex-col h-full">
-      <h3 className="font-serif text-xl text-charcoal">{s.title}</h3>
+    <div className="p-6 flex flex-col h-full border-b-4 border-transparent group-hover:border-gold transition-colors duration-500">
+      <h3 className="font-serif text-xl text-charcoal group-hover:text-gold transition-colors">{s.title}</h3>
       <p className="mt-2 text-sm text-charcoal/70 leading-relaxed">{s.desc}</p>
       
       {s.indications && (
