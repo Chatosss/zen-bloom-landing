@@ -36,7 +36,7 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Hatha Yoga",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Hatha-01.jpg",
-    description: "O Hatha Yoga é uma prática tradicional que integra posturas físicas (ásanas), técnicas respiratórias (pranayamas), mantras, relaxamento e meditação.",
+    description: "O Hatha Yoga é uma prática milenar que integra posturas físicas (ásanas), técnicas respiratórias (pranayamas), mantras, relaxamento e meditação.",
     extendedDesc: [
       "Essa combinação promove relaxamento profundo, serenidade e paz interior, equilíbrio entre o sistema físico e mental, auxiliando no fortalecimento muscular, na melhora da mobilidade e na redução de tensões acumuladas no corpo.",
       "A prática estimula a consciência corporal e o controle respiratório, contribuindo para maior estabilidade emocional e bem-estar geral."
@@ -96,8 +96,11 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Yoga Terapêutico",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-04-20-at-23.33.53.jpeg",
-    description: "O Yoga Terapêutico é uma adaptação do Yoga clássico com base científica e foco na reabilitação do corpo moderno.",
-    extendedDesc: "A prática integra posturas com princípios da fisioterapia e reorganização biomecânica, auxiliando na mobilidade, na reorganização postural e na melhora da funcionalidade do corpo.",
+    description: "A prática é uma adaptação do yoga clássico com base científica e foco terapêutico, projetado para o corpo moderno, visando restaurar mobilidade, aliviar dores crônicas, melhorar a neuroplasticidade e promover longevidade com bem-estar.",
+    extendedDesc: [
+      "Ela combina posturas (ásanas) com princípios da fisioterapia e reorganização biomecânica, usando o chão e as paredes para estimular articulações e reconectar cérebro e corpo.",
+      "O yoga terapêutico é também indicado após realização de cirurgias, pois interfere no fluxo energético criando bloqueios físicos e emocionais, afinal a cirurgia é um trauma. A prática de yoga aumenta a resistência do organismo e equilibra a mente, tratando o psicológico do paciente."
+    ],
     benefits: [
       "Alívio de dores crônicas",
       "Melhora da mobilidade articular",
