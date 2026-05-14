@@ -21,14 +21,16 @@ const About = () => {
           className="relative"
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
-            <img
-              src="https://leonardopages.com/wp-content/uploads/2026/05/09-scaled.jpg"
-              alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
-              loading="lazy"
-              width={1024}
-              height={1280}
-              className="h-full w-full object-cover"
-            />
+            <div className="h-full w-full bg-cream/30">
+              <img
+                src="https://leonardopages.com/wp-content/uploads/2026/05/01570401-4fc0-4b26-aacf-88708c250267-scaled.jpg"
+                alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
+                loading="lazy"
+                width={1024}
+                height={1280}
+                className="h-full w-full object-contain scale-[1.05]"
+              />
+            </div>
           </div>
           <div className="absolute -bottom-6 -right-4 sm:-right-8 rounded-2xl glass border border-border/60 shadow-elegant px-6 py-5 max-w-[260px]">
             <p className="font-serif text-2xl text-gold leading-none">10+</p>
