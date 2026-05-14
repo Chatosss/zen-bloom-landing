@@ -8,9 +8,7 @@ const About = () => {
       <div className="container mx-auto grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-center">
         <div className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
-          <h2 className="mt-4">
-              <span className="font-signature text-6xl sm:text-7xl text-gold/90 block -mb-2">Simone Parolin</span>
-          </h2>
+          <h2 className="mt-4 font-serif text-4xl sm:text-5xl text-charcoal">Simone Parolin</h2>
         </div>
 
         <motion.div
@@ -49,9 +47,7 @@ const About = () => {
         >
           <div className="hidden lg:block">
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
-            <h2 className="mt-4">
-              <span className="font-signature text-6xl md:text-7xl lg:text-8xl text-gold/90 block -mb-2 leading-[0.8]">Simone Parolin</span>
-            </h2>
+            <h2 className="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal">Simone Parolin</h2>
           </div>
           <div className="mt-6 space-y-4 text-charcoal/75 leading-relaxed text-lg">
             <p>
