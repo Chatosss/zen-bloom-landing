@@ -113,7 +113,7 @@ const serviceData: Record<string, any> = {
   "kinesio-taping": {
     category: "Tratamentos",
     title: "Kinesio Taping",
-    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Kinesio-01.png",
+    heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/WhatsApp-Image-2026-05-12-at-14.28.06.jpeg",
     description: "O Kinesio Taping é uma técnica de bandagem elástica aplicada com objetivo terapêutico, promovendo estímulo sensorial contínuo na pele e nos tecidos subjacentes.",
     extendedDesc: [
       "A técnica auxilia na melhora da circulação sanguínea e linfática, estabilização muscular, redução de dor e modulação de processos inflamatórios.",
