@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Instagram, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const LocationCTA = () => {
@@ -87,6 +87,43 @@ const LocationCTA = () => {
              </a>
            </div>
         </motion.div>
+      </div>
+      {/* Professional Credibility Section */}
+      <div className="bg-accent/30 py-16 border-y border-border/40">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center md:text-left"
+          >
+            <div className="flex items-center gap-4">
+              <div className="bg-gold/10 p-4 rounded-full">
+                <ShieldCheck className="h-8 w-8 text-gold" />
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl text-charcoal leading-tight">
+                  Atendimento com base técnica e experiência comprovada
+                </h3>
+                <p className="text-charcoal/60 mt-1 max-w-md">
+                  Segurança e resultados fundamentados em formações acadêmicas e especializações internacionais.
+                </p>
+              </div>
+            </div>
+            <div className="h-px w-24 bg-gold/20 md:h-16 md:w-px hidden sm:block" />
+            <div className="grid grid-cols-2 gap-8 md:gap-12">
+              <div className="text-center">
+                <span className="block text-3xl font-serif text-gold">10+</span>
+                <span className="text-xs uppercase tracking-widest text-charcoal/60">Anos de Atuação</span>
+              </div>
+              <div className="text-center">
+                <span className="block text-3xl font-serif text-gold">15+</span>
+                <span className="text-xs uppercase tracking-widest text-charcoal/60">Certificações</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
