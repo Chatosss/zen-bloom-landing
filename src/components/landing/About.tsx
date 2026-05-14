@@ -72,9 +72,10 @@ const About = () => {
             <p className="font-serif italic text-xl text-charcoal/90">
               "A verdadeira descoberta está em perceber que a beleza não tem forma, mas todas as formas nascem dela!"
             </p>
-            <p className="font-serif text-lg text-gold/80 italic">
-              — Simone Santos Parolin
-            </p>
+            <div className="flex items-center gap-2">
+              <span className="text-gold/80">—</span>
+              <span className="font-signature text-3xl text-gold/90">Simone Santos Parolin</span>
+            </div>
           </div>
 
           <div className="mt-12 space-y-8 border-l-2 border-gold/10 pl-6">
