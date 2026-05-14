@@ -10,13 +10,13 @@ All colors MUST be HSL.
   :root {
     /* Brand palette — Espaço Lounge Zen */
     --background: 43 30% 98%;          /* #F9F8F6 warm light cream */
-    --foreground: 218 27% 23%;         /* #2D3748 charcoal */
+    --foreground: 38 15% 25%;         /* Warm Brownish Charcoal */
 
     --card: 0 0% 100%;
-    --card-foreground: 218 27% 23%;
+    --card-foreground: 38 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 218 27% 23%;
+    --popover-foreground: 38 15% 25%;
 
     /* Primary = warm gold/sand */
     --primary: 38 49% 56%;             /* #CBA153 */
@@ -25,13 +25,13 @@ All colors MUST be HSL.
 
     /* Secondary = Warm Sand/Champagne */
     --secondary: 35 30% 85%;           /* #E6D8C4 warm sand */
-    --secondary-foreground: 218 27% 23%;
+    --secondary-foreground: 38 15% 25%;
 
     --muted: 40 18% 92%;
-    --muted-foreground: 218 10% 40%;
+    --muted-foreground: 38 10% 40%;
 
     --accent: 38 40% 94%;              /* very pale gold tint */
-    --accent-foreground: 218 27% 23%;
+    --accent-foreground: 38 15% 25%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 43 27% 97%;
@@ -47,15 +47,15 @@ All colors MUST be HSL.
     --gold-foreground: 43 27% 97%;
     --sage: 35 30% 85%;
     --sage-deep: 38 40% 45%;
-    --sage-foreground: 218 27% 23%;
+    --sage-foreground: 38 15% 25%;
     --cream: 43 27% 97%;
-    --charcoal: 218 27% 23%;
+    --charcoal: 38 15% 25%;
 
     --gradient-gold: linear-gradient(135deg, hsl(38 49% 56%) 0%, hsl(38 60% 70%) 100%);
     --gradient-sage: linear-gradient(135deg, hsl(35 30% 75%) 0%, hsl(35 30% 85%) 100%);
     --gradient-hero: linear-gradient(180deg, hsla(43 27% 97% / 0) 0%, hsla(43 27% 97% / 0.6) 60%, hsl(43 27% 97%) 100%);
 
-    --shadow-soft: 0 10px 40px -15px hsl(218 27% 23% / 0.12);
+    --shadow-soft: 0 10px 40px -15px hsl(38 15% 25% / 0.12);
     --shadow-elegant: 0 20px 60px -20px hsl(38 49% 30% / 0.18);
     --shadow-gold: 0 10px 40px -10px hsl(38 49% 56% / 0.45);
 
