@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         serif: ['"Playfair Display"', "Georgia", "serif"],
-        signature: ['"Great Vibes"', "cursive"],
+        signature: ['"Mrs Saint Delafield"', "cursive"],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
