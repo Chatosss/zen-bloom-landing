@@ -9,7 +9,7 @@ const About = () => {
         <div className="lg:hidden">
           <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
           <h2 className="mt-4">
-              <span className="font-signature text-7xl sm:text-8xl text-gold/90 block -mb-4">Simone Parolin</span>
+              <span className="font-signature text-6xl sm:text-7xl text-gold/90 block -mb-2">Simone Parolin</span>
           </h2>
         </div>
 
@@ -48,7 +48,7 @@ const About = () => {
           <div className="hidden lg:block">
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
             <h2 className="mt-4">
-              <span className="font-signature text-7xl md:text-8xl lg:text-9xl text-gold/90 block -mb-4 leading-[0.8]">Simone Parolin</span>
+              <span className="font-signature text-6xl md:text-7xl lg:text-8xl text-gold/90 block -mb-2 leading-[0.8]">Simone Parolin</span>
             </h2>
           </div>
           <div className="mt-6 space-y-4 text-charcoal/75 leading-relaxed text-lg">
