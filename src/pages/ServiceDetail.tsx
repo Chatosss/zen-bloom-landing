@@ -64,6 +64,7 @@ const serviceData: Record<string, any> = {
       "Redução de lombalgias"
     ],
     whoIsItFor: [
+      "Todas as mulheres que desejam melhorar o condicionamento físico e mental.",
       "Hérnia de disco",
       "Desvios posturais",
       "Pós-operatório",
