@@ -12,7 +12,8 @@ const practices = [
 
 const Services = () => {
   return (
-    <section id="servicos" className="py-24 lg:py-32 bg-accent/40">
+    <section id="servicos" className="py-24 lg:py-32 bg-accent/40 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-gold/5 pointer-events-none" />
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +23,7 @@ const Services = () => {
           className="text-center max-w-3xl mx-auto space-y-4"
         >
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal leading-tight text-center">
-            Nossas Práticas de Bem-Estar
+            Saúde e bem estar
           </h2>
           <div className="flex justify-center">
             <div className="h-1 w-24 gradient-gold rounded-full" />

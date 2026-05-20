@@ -26,7 +26,8 @@ const items = [
 
 const Authority = () => {
   return (
-    <section id="autoridade" className="py-24 lg:py-32 bg-background">
+    <section id="autoridade" className="py-24 lg:py-32 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,hsl(var(--gold)/0.05),transparent_40%)] pointer-events-none" />
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
