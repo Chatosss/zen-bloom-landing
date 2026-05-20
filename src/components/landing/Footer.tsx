@@ -21,7 +21,7 @@ const Footer = () => {
             {isHomePage ? (
               <>
                  <li><a href="#hero" className="hover:text-gold transition-colors">Início</a></li>
-                 <li><a href="#servicos" className="hover:text-gold transition-colors">Práticas</a></li>
+                 <li><a href="#servicos" className="hover:text-gold transition-colors">Saúde e bem estar</a></li>
                  <li><a href="#sobre" className="hover:text-gold transition-colors">Sobre Simone</a></li>
                  <li><a href="#contato" className="hover:text-gold transition-colors">Contato</a></li>
               </>
@@ -59,7 +59,7 @@ const Footer = () => {
              <p className="text-xs text-cream/50 flex items-center gap-2 text-lowercase">
                <MessageCircle className="h-3 w-3" /> zenloungebc@gmail.com
              </p>
-              <p className="text-xs text-cream/50">CREFITO 2 · Cref/SC-043807 · Balneário Camboriú, SC</p>
+              <p className="text-xs text-cream/50">Confef Cref · Cref/SC-043807 · Balneário Camboriú, SC</p>
            </div>
         </div>
       </div>

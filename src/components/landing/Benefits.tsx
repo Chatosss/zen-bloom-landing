@@ -14,7 +14,8 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="py-24 lg:py-32 bg-accent/30">
+    <section className="py-24 lg:py-32 bg-accent/30 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/5 to-transparent pointer-events-none" />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
