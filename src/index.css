@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Brand palette — Espaço Lounge Zen */
-    --background: 43 30% 98%;          /* #F9F8F6 warm light cream */
+    --background: 38 40% 97%;          /* Slightly warmer, less white cream */
     --foreground: 38 15% 25%;         /* Warm Brownish Charcoal */
 
     --card: 0 0% 100%;

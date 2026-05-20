@@ -25,8 +25,8 @@ const treatments = [
 
 const Treatments = () => {
   return (
-    <section id="tratamentos" className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,hsl(var(--gold)/0.03),transparent_40%)] pointer-events-none" />
+    <section id="tratamentos" className="py-24 lg:py-32 bg-gradient-to-b from-background via-accent/40 to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,hsl(var(--gold)/0.08),transparent_50%)] pointer-events-none" />
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

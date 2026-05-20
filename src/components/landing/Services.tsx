@@ -13,7 +13,7 @@ const practices = [
 const Services = () => {
   return (
     <section id="servicos" className="py-24 lg:py-32 bg-accent/40 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-tr from-gold/5 via-transparent to-gold/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-gold/15 via-transparent to-gold/15 pointer-events-none" />
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

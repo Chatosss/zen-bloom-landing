@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const LocationCTA = () => {
   return (
-    <section id="contato" className="bg-background">
+    <section id="contato" className="bg-gradient-to-b from-background to-accent/20">
       {/* Location */}
       <div className="container mx-auto py-24 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
