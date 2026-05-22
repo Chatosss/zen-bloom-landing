@@ -21,7 +21,7 @@ const About = () => {
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
             <div className="h-full w-full bg-cream/30">
               <img
-                src="https://leonardopages.com/wp-content/uploads/2026/05/01570401-4fc0-4b26-aacf-88708c250267-scaled.jpg"
+                src="https://leonardopages.com/wp-content/uploads/2026/05/d66348f9-f22d-4664-8dca-9932a829cb62.jpg"
                 alt="Simone Santos Parolin, fisioterapeuta especialista em saúde da mulher"
                 loading="lazy"
                 width={1024}
@@ -86,7 +86,8 @@ const About = () => {
                   "Pós-graduação em Estética – Faculdade Finaci (São Paulo)",
                   "Pós-graduação em Pré e Pós-operatório – Faculdade Finaci (São Paulo)",
                   "Pós-graduação em Pilates – PhysicalMind Institute (Nova York)",
-                  "Pós-graduação em Estética – UniBF"
+                  "Pós-graduação em Estética – UniBF",
+                  "Graduação e Pós Graduação em Estética e Cosmetologia"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-gold shrink-0" />
