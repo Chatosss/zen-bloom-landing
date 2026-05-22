@@ -24,7 +24,7 @@ const LocationCTA = () => {
             </li>
             <li className="flex items-start gap-3">
               <Clock className="h-5 w-5 text-gold mt-0.5" />
-              <span className="text-charcoal/85">Seg a Sex - 7h às 20h | Sáb - 8h às 13h</span>
+              <span className="text-charcoal/85">Atendimento com horário marcado</span>
             </li>
             <li className="flex items-start gap-3">
               <Phone className="h-5 w-5 text-gold mt-0.5" />
@@ -54,39 +54,58 @@ const LocationCTA = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-charcoal" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--gold)/0.25),transparent_55%)]" />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8 }}
-          className="relative container mx-auto py-24 lg:py-32 text-center"
-        >
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-cream leading-[1.1] max-w-3xl mx-auto">
-            Seu corpo merece cuidado. <span className="block italic mt-2 text-gold">Sua mente merece equilíbrio</span>
-          </h2>
-          <p className="mt-6 text-cream/85 max-w-xl mx-auto">
-            Permita-se viver uma experiência de bem-estar completa em um ambiente acolhedor, seguro e profissional.
-          </p>
-          <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
-            <Button
-              size="lg"
-              className="mt-10 gradient-gold text-gold-foreground rounded-full px-10 h-14 text-base shadow-gold hover:scale-[1.04] transition-transform animate-soft-pulse"
+        <div className="relative container mx-auto py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left"
             >
-              Falar com a profissional agora
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-          </a>
-           <div className="mt-12">
-             <a
-               href="https://www.instagram.com/espaco_lounge_zen"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 text-cream/70 hover:text-gold transition-colors"
-             >
-               <Instagram className="h-4 w-4" /> @espaco_lounge_zen
-             </a>
-           </div>
-        </motion.div>
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-cream leading-[1.1] max-w-3xl">
+                Seu corpo merece cuidado. <span className="block italic mt-2 text-gold">Sua mente merece equilíbrio</span>
+              </h2>
+              <p className="mt-6 text-cream/85 max-w-xl mx-auto lg:mx-0">
+                Permita-se viver uma experiência de bem-estar completa em um ambiente acolhedor, seguro e profissional.
+              </p>
+              <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+                <Button
+                  size="lg"
+                  className="mt-10 gradient-gold text-gold-foreground rounded-full px-10 h-14 text-base shadow-gold hover:scale-[1.04] transition-transform animate-soft-pulse"
+                >
+                  Falar com a profissional agora
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </a>
+               <div className="mt-12">
+                 <a
+                   href="https://www.instagram.com/espaco_lounge_zen"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-flex items-center gap-2 text-cream/70 hover:text-gold transition-colors"
+                 >
+                   <Instagram className="h-4 w-4" /> @espaco_lounge_zen
+                 </a>
+               </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8 }}
+              className="hidden lg:block relative aspect-square rounded-[2rem] overflow-hidden shadow-elegant border border-white/10"
+            >
+              <img
+                src="https://leonardopages.com/wp-content/uploads/2026/05/0802d10a-69a0-4752-bbf7-946b7a5c3134.jpg"
+                alt="Bem-estar e Cuidado"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
+        </div>
       </div>
       {/* Professional Credibility Section */}
       <div className="bg-accent/30 py-16 border-y border-border/40">

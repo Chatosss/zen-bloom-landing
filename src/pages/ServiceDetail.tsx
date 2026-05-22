@@ -125,14 +125,15 @@ const serviceData: Record<string, any> = {
       "Diminuição de edemas",
       "Estabilização articular",
       "Melhora da função muscular",
-      "Auxílio no processo inflamatório"
+      "Auxílio no processo inflamatório",
+      "Prevenção da diástase"
     ],
     whoIsItFor: [
       "Gestantes",
       "Pós-operatório corporal e facial",
       "Lesões musculares",
       "Entorses",
-      "Gestantes (suporte abdominal)",
+      "Gestante pré e pós-cirúrgico",
       "Atletas"
     ]
   },
@@ -147,7 +148,7 @@ const serviceData: Record<string, any> = {
     ],
     benefits: [
       "Redução de edemas e hematomas",
-      "Prevenção de fibroses",
+      "Prevenção de fibroses e seromas",
       "Melhora da cicatrização",
       "Estímulo à circulação linfática",
       "Recuperação mais confortável"
