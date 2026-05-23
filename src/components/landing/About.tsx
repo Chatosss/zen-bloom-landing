@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section id="sobre" className="py-24 lg:py-32 bg-background relative">
+    <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20">
           {/* Sticky Image Column */}
-          <div className="lg:sticky lg:top-24 self-start">
+          <div className="lg:sticky lg:top-32 self-start h-auto">
             <motion.div
               initial={{ opacity: 0, x: -60, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
