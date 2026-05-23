@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-14 lg:gap-20 items-start relative">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-14 lg:gap-20 items-start">
           {/* Sticky Image Column */}
           <div className="w-full lg:w-1/2 lg:sticky lg:top-32 self-start h-auto z-10">
             <motion.div
