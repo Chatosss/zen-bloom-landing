@@ -77,7 +77,7 @@ const serviceData: Record<string, any> = {
     category: "Práticas",
     title: "Yin Yoga",
     heroImg: "https://leonardopages.com/wp-content/uploads/2026/05/Yin-01.jpg",
-    description: "O Yin Yoga é uma prática mais introspectiva, caracterizada por posturas suaves mantidas por períodos mais longos.",
+    description: "Prática derivada do Hatha Yoga, com abordagem mais contemplativa e profunda. Os movimentos são realizados com posturas suaves e permanências mais longas, estimulando o relaxamento muscular e a liberação de tensões acumuladas.",
     extendedDesc: "Essa permanência estimula o alongamento profundo dos tecidos conjuntivos e favorece o relaxamento do corpo e da mente conduzindo a um estado meditativo.",
     benefits: [
       "Relaxamento profundo",
