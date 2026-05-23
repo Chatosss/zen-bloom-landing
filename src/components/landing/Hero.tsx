@@ -49,17 +49,19 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={hero}
-          alt="Estúdio sereno do Espaço Lounge Zen"
-          className="h-full w-full object-cover"
-          fetchPriority="high"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/75 to-cream/30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+    <section id="hero" className="relative min-h-screen flex items-center pt-24">
+      {/* Background image - now sticky within section */}
+      <div className="absolute inset-0 -z-10 h-full w-full">
+        <div className="sticky top-0 h-screen w-full overflow-hidden">
+          <img
+            src={hero}
+            alt="Estúdio sereno do Espaço Lounge Zen"
+            className="h-full w-full object-cover"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/75 to-cream/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+        </div>
       </div>
 
       <div className="container mx-auto py-16">
