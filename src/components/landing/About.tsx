@@ -6,9 +6,9 @@ const About = () => {
   return (
     <section id="sobre" className="py-24 lg:py-32 bg-background">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-14 lg:gap-20 items-start relative">
           {/* Sticky Image Column */}
-          <div className="lg:sticky lg:top-32 self-start h-auto">
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-32 self-start">
             <motion.div
               initial={{ opacity: 0, x: -60, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -37,6 +37,7 @@ const About = () => {
 
           {/* Text Column */}
           <motion.div
+            className="w-full lg:w-1/2"
             initial={{ opacity: 0, x: 60, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
