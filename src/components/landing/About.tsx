@@ -6,9 +6,9 @@ const About = () => {
   return (
     <section id="sobre" className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-stretch">
           {/* Sticky Image Column */}
-          <div className="lg:sticky lg:top-32 h-fit">
+          <div className="lg:sticky lg:top-24 self-start">
             <motion.div
               initial={{ opacity: 0, x: -60, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
