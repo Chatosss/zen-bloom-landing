@@ -7,13 +7,8 @@ const About = () => {
     <section id="sobre" className="py-24 lg:py-32 bg-background relative">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 lg:gap-20 items-start">
-          {/* Sticky Column */}
-          <div className="lg:sticky lg:top-32 h-fit space-y-8">
-            <div className="lg:hidden">
-              <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
-              <h2 className="mt-4 font-serif text-3xl sm:text-4xl text-charcoal">Simone Santos Parolin</h2>
-            </div>
-
+          {/* Sticky Image Column */}
+          <div className="lg:sticky lg:top-32 h-fit">
             <motion.div
               initial={{ opacity: 0, x: -60, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
@@ -37,25 +32,22 @@ const About = () => {
                 <p className="font-serif text-2xl text-gold leading-none">10+</p>
                 <p className="mt-1 text-sm text-charcoal/70">anos cuidando da saúde feminina com excelência</p>
               </div>
-              <div className="absolute -top-6 -left-4 hidden sm:block rounded-full gradient-gold text-gold-foreground px-5 py-2 shadow-gold">
-                <span className="text-xs uppercase tracking-[0.2em]">Simone Santos Parolin</span>
-              </div>
             </motion.div>
-
-            <div className="hidden lg:block text-center lg:text-left">
-              <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
-              <h2 className="mt-4 font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Simone Santos Parolin</h2>
-            </div>
           </div>
 
-          {/* Scrollable Column */}
+          {/* Text Column */}
           <motion.div
             initial={{ opacity: 0, x: 60, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="mt-6 lg:mt-0 space-y-4 text-charcoal/75 leading-relaxed text-lg">
+            <div>
+              <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>
+              <h2 className="mt-4 font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Simone Santos Parolin</h2>
+            </div>
+
+            <div className="mt-8 space-y-4 text-charcoal/75 leading-relaxed text-lg">
               <p>
                 Bacharel em educação Física com pós graduações em Estética e Fisioterapia esportiva e terapias manuais.
               </p>
