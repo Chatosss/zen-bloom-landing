@@ -63,64 +63,13 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto py-16">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+          {/* Video positioned above everything */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
-            className="flex flex-col items-center"
-          >
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-8xl leading-[1.1] text-charcoal break-words">
-              Cada respiração é uma chance de se reconectar.
-            </h1>
-
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
-            >
-              <Sparkles className="h-3.5 w-3.5" />
-              Atendimento personalizado na saúde da mulher!
-            </motion.span>
-            
-            <div className="mt-8 space-y-6 max-w-2xl">
-              <p className="text-lg sm:text-xl text-charcoal/75 leading-relaxed">
-                O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase da vida.
-              </p>
-              
-              <p className="text-lg text-charcoal/75 font-medium leading-relaxed italic border-gold/30">
-                Almeja, em especial para a estética da mulher, o trato profissional em drenagem linfática e o tratamento pré e pós-operatório de procedimento estético ou gestacional, com opções de práticas de Yoga e Pilates, sempre em busca do equilíbrio entre saúde-beleza-e bem estar.
-              </p>
-            </div>
-
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
-                <Button
-                  size="lg"
-                  className="gradient-gold text-gold-foreground rounded-full px-10 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.03] transition-transform duration-300"
-                >
-                  Agendar atendimento
-                  <ArrowRight className="h-5 w-5" />
-                </Button>
-              </a>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full px-10 h-14 text-base border-charcoal/20 bg-cream/60 hover:bg-cream text-charcoal"
-              >
-                Conhecer Práticas
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Video positioned below the content */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 40 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="w-full mt-16 relative"
+            initial={{ opacity: 0, scale: 0.95, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full mb-12 relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/60 aspect-video w-full max-w-5xl mx-auto group">
               <div className="h-full w-full">
@@ -152,6 +101,56 @@ const Hero = () => {
                   )}
                 </span>
               </button>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
+            className="flex flex-col items-center"
+          >
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
+            >
+              <Sparkles className="h-3.5 w-3.5" />
+              Atendimento personalizado na saúde da mulher!
+            </motion.span>
+
+            <h1 className="mt-8 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
+              Cada respiração é uma chance de se reconectar.
+            </h1>
+            
+            <div className="mt-8 space-y-6 max-w-2xl">
+              <p className="text-lg sm:text-xl text-charcoal/75 leading-relaxed">
+                O Espaço Lounge Zen foi criado com o intuito de proporcionar um ambiente sereno onde você consiga relaxar, energizar e tratar o corpo e a mente em qualquer momento ou fase da vida.
+              </p>
+              
+              <p className="text-lg text-charcoal/75 font-medium leading-relaxed italic border-gold/30">
+                Almeja, em especial para a estética da mulher, o trato profissional em drenagem linfática e o tratamento pré e pós-operatório de procedimento estético ou gestacional, com opções de práticas de Yoga e Pilates, sempre em busca do equilíbrio entre saúde-beleza-e bem estar.
+              </p>
+            </div>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
+                <Button
+                  size="lg"
+                  className="gradient-gold text-gold-foreground rounded-full px-10 h-14 text-base shadow-gold animate-soft-pulse hover:scale-[1.03] transition-transform duration-300"
+                >
+                  Agendar atendimento
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </a>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-10 h-14 text-base border-charcoal/20 bg-cream/60 hover:bg-cream text-charcoal"
+              >
+                Conhecer Práticas
+              </Button>
             </div>
           </motion.div>
         </div>
