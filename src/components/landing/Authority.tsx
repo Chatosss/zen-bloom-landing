@@ -52,7 +52,7 @@ const Authority = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.12, ease: [0.4, 0, 0.2, 1] }}
-              className="group relative rounded-2xl bg-card border border-border/60 p-8 shadow-soft hover:shadow-elegant hover:-translate-y-2 transition-all duration-500"
+              className="group relative rounded-2xl bg-card border border-border/60 p-8 shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift shine-effect"
             >
               <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-sage-deep group-hover:gradient-gold group-hover:text-gold-foreground transition-all duration-500">

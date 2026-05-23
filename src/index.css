@@ -174,6 +174,53 @@ All colors MUST be HSL.
     transform: translateX(-100%);
     z-index: 20;
   }
+
+  /* Parallax and Floating Effects */
+  .parallax-bg {
+    transform: translateY(var(--parallax-y, 0));
+    transition: transform 0.1s ease-out;
+  }
+
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.01);
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.75s;
+  }
+  .shine-effect:hover::before {
+    left: 125%;
+  }
 }
 
 a[href*="lovable.dev"], 

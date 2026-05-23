@@ -57,7 +57,7 @@ const Benefits = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-3 p-3 rounded-xl bg-background/50 border border-border/40 shadow-sm"
+                  className="flex items-start gap-3 p-3 rounded-xl bg-background/50 border border-border/40 shadow-sm hover-lift shine-effect"
                 >
                   <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold/10 text-gold shrink-0">
                     <Check className="h-4 w-4" />

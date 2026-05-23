@@ -59,7 +59,7 @@ const ServiceCard = ({ s, i }: { s: any; i: number }) => (
     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.8, delay: (i % 3) * 0.15, ease: [0.16, 1, 0.3, 1] }}
-    className="group overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft hover:shadow-elegant transition-all duration-500"
+    className="group overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift shine-effect"
   >
     <div className="relative aspect-[4/3] overflow-hidden">
       <img
