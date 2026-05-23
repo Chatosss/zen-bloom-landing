@@ -70,19 +70,19 @@ const Hero = () => {
             transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col items-center"
           >
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-8xl leading-[1.1] text-charcoal break-words">
+              Cada respiração é uma chance de se reconectar.
+            </h1>
+
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
+              className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-cream/70 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-gold"
             >
               <Sparkles className="h-3.5 w-3.5" />
               Atendimento personalizado na saúde da mulher!
             </motion.span>
-
-            <h1 className="mt-8 font-serif text-4xl sm:text-5xl lg:text-7xl leading-[1.1] text-charcoal break-words">
-              Cada respiração é uma chance de se reconectar.
-            </h1>
             
             <div className="mt-8 space-y-6 max-w-2xl">
               <p className="text-lg sm:text-xl text-charcoal/75 leading-relaxed">
