@@ -122,7 +122,7 @@ const serviceData: Record<string, any> = {
     ],
     benefits: [
       "Redução de dor",
-      "Diminuição de edemas",
+      "Diminuição de edemas e seromas",
       "Estabilização articular",
       "Melhora da função muscular",
       "Auxílio no processo inflamatório",
