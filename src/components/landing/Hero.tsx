@@ -116,9 +116,10 @@ const Hero = () => {
 
           {/* Video positioned below the content */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.95, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="w-full mt-16 relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/60 aspect-video w-full max-w-5xl mx-auto group">
