@@ -157,6 +157,23 @@ All colors MUST be HSL.
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-gold { box-shadow: var(--shadow-gold); }
+
+  /* New animation classes */
+  .reveal-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+  .reveal-sweep::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-gold);
+    transform: translateX(-100%);
+    z-index: 20;
+  }
 }
 
 a[href*="lovable.dev"], 

@@ -12,10 +12,10 @@ const About = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+          initial={{ opacity: 0, x: -60, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-elegant">
@@ -40,10 +40,10 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+          initial={{ opacity: 0, x: 60, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="hidden lg:block">
             <span className="text-xs uppercase tracking-[0.25em] text-gold font-medium">Sobre a Profissional</span>

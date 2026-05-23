@@ -43,10 +43,10 @@ const Services = () => {
 
 const ServiceCard = ({ s, i }: { s: any; i: number }) => (
   <motion.article
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 60, scale: 0.95 }}
+    whileInView={{ opacity: 1, y: 0, scale: 1 }}
     viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.6, delay: (i % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
+    transition={{ duration: 0.8, delay: (i % 3) * 0.15, ease: [0.16, 1, 0.3, 1] }}
     className="group overflow-hidden rounded-2xl bg-card border border-border/60 shadow-soft hover:shadow-elegant transition-all duration-500 relative"
   >
     <div className="absolute top-4 right-4 z-10">
