@@ -122,7 +122,7 @@ const Hero = () => {
               Atendimento personalizado na saúde da mulher!
             </motion.span>
 
-            <h1 className="mt-8 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-charcoal break-words">
+            <h1 className="mt-8 font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.1] text-charcoal break-words">
               Cada respiração é uma chance de se reconectar.
             </h1>
             
