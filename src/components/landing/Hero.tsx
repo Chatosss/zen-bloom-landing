@@ -13,30 +13,43 @@ const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    // Tenta dar play automático assim que carregar
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Autoplay blocked by browser. User interaction needed or muted required.", error);
-      });
-    }
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Browser policy: Autoplay MUST be muted
+    video.muted = true;
+    setIsMuted(true);
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+        setIsPlaying(true);
+        console.log("Autoplay successful");
+      } catch (err) {
+        console.log("Autoplay failed:", err);
+        // Fallback: stay paused, show play button (handled by state)
+        setIsPlaying(false);
+      }
+    };
+
+    playVideo();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const video = entry.target as HTMLVideoElement;
-          if (!entry.isIntersecting && !video.paused) {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+            setIsPlaying(true);
+          } else {
             video.pause();
             setIsPlaying(false);
-          } else if (entry.isIntersecting && video.paused) {
-            // Volta a tocar se entrar na tela novamente
-            video.play().catch(() => {});
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
-    if (videoRef.current) observer.observe(videoRef.current);
+    observer.observe(video);
 
     return () => {
       observer.disconnect();
@@ -48,6 +61,7 @@ const Hero = () => {
     if (!v) return;
     
     if (v.paused) {
+      // When user clicks, we can unmute
       v.muted = false;
       setIsMuted(false);
       v.play();
@@ -60,7 +74,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24">
-      {/* Background image - now sticky within section */}
+      {/* Background image - sticky within section */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <img
