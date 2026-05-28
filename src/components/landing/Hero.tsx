@@ -13,6 +13,13 @@ const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
+    // Tenta dar play automático assim que carregar
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Autoplay blocked by browser. User interaction needed or muted required.", error);
+      });
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,6 +27,9 @@ const Hero = () => {
           if (!entry.isIntersecting && !video.paused) {
             video.pause();
             setIsPlaying(false);
+          } else if (entry.isIntersecting && video.paused) {
+            // Volta a tocar se entrar na tela novamente
+            video.play().catch(() => {});
           }
         });
       },
@@ -80,6 +90,8 @@ const Hero = () => {
                   src={VIDEO_URL}
                   poster={COVER_URL}
                   loop
+                  muted
+                  autoPlay
                   playsInline
                   preload="auto"
                   onPlay={() => setIsPlaying(true)}
