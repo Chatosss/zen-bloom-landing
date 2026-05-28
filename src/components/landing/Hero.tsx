@@ -16,30 +16,31 @@ const Hero = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Browser policy: Autoplay MUST be muted
+    // Force essential attributes for autoplay
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("playsinline", "");
     video.muted = true;
-    setIsMuted(true);
 
-    const playVideo = async () => {
-      try {
-        await video.play();
-        setIsPlaying(true);
-        console.log("Autoplay successful");
-      } catch (err) {
-        console.log("Autoplay failed:", err);
-        // Fallback: stay paused, show play button (handled by state)
-        setIsPlaying(false);
-      }
+    const attemptPlay = () => {
+      video.play()
+        .then(() => {
+          setIsPlaying(true);
+          console.log("Autoplay successful");
+        })
+        .catch((err) => {
+          console.log("Autoplay failed, retrying in 1s...", err);
+          setTimeout(attemptPlay, 1000);
+        });
     };
 
-    playVideo();
+    attemptPlay();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            video.play().catch(() => {});
-            setIsPlaying(true);
+            video.play().then(() => setIsPlaying(true)).catch(() => {});
           } else {
             video.pause();
             setIsPlaying(false);
@@ -61,7 +62,6 @@ const Hero = () => {
     if (!v) return;
     
     if (v.paused) {
-      // When user clicks, we can unmute
       v.muted = false;
       setIsMuted(false);
       v.play();
@@ -74,7 +74,6 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24">
-      {/* Background image - sticky within section */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <img
@@ -90,7 +89,6 @@ const Hero = () => {
 
       <div className="container mx-auto py-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          {/* Video positioned above everything */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -108,8 +106,6 @@ const Hero = () => {
                   autoPlay
                   playsInline
                   preload="auto"
-                  onPlay={() => setIsPlaying(true)}
-                  onPause={() => setIsPlaying(false)}
                   className="h-full w-full object-cover"
                 />
               </div>
