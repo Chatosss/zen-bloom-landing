@@ -13,32 +13,50 @@ const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    // Tenta dar play automático assim que carregar
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Autoplay blocked by browser. User interaction needed or muted required.", error);
-      });
-    }
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Browser policy: Autoplay MUST be muted.
+    // We set these directly on the element as well as via attributes.
+    video.muted = true;
+    video.defaultMuted = true;
+    video.autoplay = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("autoplay", "");
+    video.setAttribute("playsinline", "");
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+        setIsPlaying(true);
+        console.log("Autoplay successful");
+      } catch (err) {
+        console.warn("Autoplay was prevented. This is often due to browser policies.", err);
+        // If it fails, we keep muted and try again after a small delay or just wait for user interaction
+      }
+    };
+
+    // Attempt to play after a short delay to ensure DOM is ready
+    const timeoutId = setTimeout(playVideo, 100);
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const video = entry.target as HTMLVideoElement;
-          if (!entry.isIntersecting && !video.paused) {
+          if (entry.isIntersecting) {
+            video.play().then(() => setIsPlaying(true)).catch(() => {});
+          } else {
             video.pause();
             setIsPlaying(false);
-          } else if (entry.isIntersecting && video.paused) {
-            // Volta a tocar se entrar na tela novamente
-            video.play().catch(() => {});
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
-    if (videoRef.current) observer.observe(videoRef.current);
+    observer.observe(video);
 
     return () => {
+      clearTimeout(timeoutId);
       observer.disconnect();
     };
   }, []);
@@ -60,7 +78,6 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24">
-      {/* Background image - now sticky within section */}
       <div className="absolute inset-0 -z-10 h-full w-full">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <img
@@ -76,7 +93,6 @@ const Hero = () => {
 
       <div className="container mx-auto py-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          {/* Video positioned above everything */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
