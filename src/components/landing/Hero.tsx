@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import hero from "@/assets/hero.jpg";
 
-const VIDEO_URL = "https://espa%C3%A7oloungezen.com/wp-content/uploads/2026/04/Video-da-fonte.mp4";
+const VIDEO_URL = "/videos/hero.mp4";
 const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.webp";
 
 const Hero = () => {
