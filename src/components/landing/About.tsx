@@ -50,7 +50,7 @@ const About = () => {
 
             <div className="mt-8 space-y-4 text-charcoal/75 leading-relaxed text-lg">
               <p>
-                Bacharel em educação Física com pós graduações em Estética e Fisioterapia esportiva e terapias manuais.
+                Bacharel em educação Física, graduada em Estética e Cosmetologia com pós graduações em Estética e Fisioterapia esportiva e terapias manuais.
               </p>
               <p>
                 Teve uma trajetória saudável sempre em busca da saúde e bem estar, além de praticante assídua de yoga e Pilates.
@@ -82,11 +82,12 @@ const About = () => {
                 <ul className="mt-4 space-y-3">
                   {[
                     "Bacharel em Educação Física – Universidade Positivo (Curitiba/PR)",
+                    "Graduação em Estética e Cosmetologia",
                     "Pós-graduação em Estética – Faculdade Finaci (São Paulo)",
                     "Pós-graduação em Pré e Pós-operatório – Faculdade Finaci (São Paulo)",
                     "Pós-graduação em Pilates – PhysicalMind Institute (Nova York)",
                     "Pós-graduação em Estética – UniBF",
-                    "Graduação e Pós Graduação em Estética e Cosmetologia",
+                    "Pós Graduação em Estética e Cosmetologia",
                     "Pós Graduada em Massoterapia Ibrat Curitiba/Pr",
                     "Especialização em Estética Finaci São Paulo",
                     "Pós-graduada em Pilates solo, bola e aparelhos Voll Pilates Curitiba/Pr"
