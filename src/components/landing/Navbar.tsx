@@ -53,6 +53,9 @@ const Navbar = ({ isDetail = false }: { isDetail?: boolean }) => {
               Voltar para Início
             </Link>
           )}
+          <span className="text-[10px] font-medium text-charcoal/40 bg-white/60 border border-border/30 rounded-full px-2 py-0.5 ml-2">
+            v1.01
+          </span>
         </nav>
         <a href="http://wa.me/5541998561828" target="_blank" rel="noopener noreferrer" className="contents">
           <Button variant="default" size="sm" className="gradient-gold text-gold-foreground hover:opacity-90 hover:scale-[1.03] transition-all duration-300 shadow-gold rounded-full px-5">
