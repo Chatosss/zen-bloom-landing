@@ -16,49 +16,10 @@ const Hero = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Browser policy: Autoplay MUST be muted.
-    // We set these directly on the element as well as via attributes.
+    // Garante que o vídeo inicia pausado
     video.muted = true;
-    video.defaultMuted = true;
-    video.autoplay = true;
-    video.setAttribute("muted", "");
-    video.setAttribute("autoplay", "");
-    video.setAttribute("playsinline", "");
-
-    const playVideo = async () => {
-      try {
-        await video.play();
-        setIsPlaying(true);
-        console.log("Autoplay successful");
-      } catch (err) {
-        console.warn("Autoplay was prevented. This is often due to browser policies.", err);
-        // If it fails, we keep muted and try again after a small delay or just wait for user interaction
-      }
-    };
-
-    // Attempt to play after a short delay to ensure DOM is ready
-    const timeoutId = setTimeout(playVideo, 100);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            video.play().then(() => setIsPlaying(true)).catch(() => {});
-          } else {
-            video.pause();
-            setIsPlaying(false);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(video);
-
-    return () => {
-      clearTimeout(timeoutId);
-      observer.disconnect();
-    };
+    video.pause();
+    setIsPlaying(false);
   }, []);
 
   const togglePlay = () => {
@@ -106,9 +67,6 @@ const Hero = () => {
                   src={VIDEO_URL}
                   poster={COVER_URL}
                   loop
-                  muted
-                  autoPlay
-                  playsInline
                   preload="auto"
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
