@@ -9,6 +9,7 @@ const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.web
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
@@ -20,6 +21,25 @@ const Hero = () => {
     video.muted = true;
     video.pause();
     setIsPlaying(false);
+
+    // Observa quando o vídeo sai/entra na viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            video.pause();
+            setIsPlaying(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const togglePlay = () => {
@@ -55,6 +75,7 @@ const Hero = () => {
       <div className="container mx-auto py-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           <motion.div
+            ref={containerRef}
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
