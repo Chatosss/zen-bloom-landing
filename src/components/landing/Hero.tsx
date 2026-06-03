@@ -75,6 +75,7 @@ const Hero = () => {
       <div className="container mx-auto py-16">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           <motion.div
+            ref={containerRef}
             initial={{ opacity: 0, scale: 0.95, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
