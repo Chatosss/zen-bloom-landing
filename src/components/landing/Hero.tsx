@@ -9,6 +9,7 @@ const COVER_URL = "https://leonardopages.com/wp-content/uploads/2026/04/capa.web
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
@@ -20,6 +21,25 @@ const Hero = () => {
     video.muted = true;
     video.pause();
     setIsPlaying(false);
+
+    // Observa quando o vídeo sai/entra na viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            video.pause();
+            setIsPlaying(false);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   const togglePlay = () => {
